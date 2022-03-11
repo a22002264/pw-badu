@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Quizz</title>
+    <link rel="shortcut icon" type="image/x-icon" href="image/Green-Leaf.ico"/>
 </head>
 
 
-<body>
+<body style="background-color:powderblue;">
 <header>
     <h3>Quizz</h3>
 </header>
@@ -29,64 +30,67 @@
             </fieldset>
             <fieldset>
                 <legend>Perguntas da Cidade de Lisboa</legend>
-                <p>Onde fica o Panteão Nacional? <input type="text" name="r1"></p>
+                <p>Onde fica o Panteão Nacional? <input type="text" name="r1" value="Insira Texto"></p>
 
 
 
-                <p>Please select your favorite Web language:</p>
- <input type="radio" id="html" name="fav_language" value="HTML">
- <label for="html">HTML</label><br>
- <input type="radio" id="css" name="fav_language" value="CSS">
- <label for="css">CSS</label><br>
- <input type="radio" id="javascript" name="fav_language" value="JavaScript">
- <label for="javascript">JavaScript</label>
+                <p>Quais destes rios faz parte de Lisboa?</p>
+ <input type="radio" id="tejo" name="fav_language" value="Rio Tejo"  >
+ <label for="tejo">HTML</label><br>
+ <input type="radio" id="douro" name="fav_language" value="Rio Douro">
+ <label for="douro">CSS</label><br>
+ <input type="radio" id="guadiana" name="fav_language" value="Rio Guadiana" >
+ <label for="guadiana">JavaScript</label>
 
   <br>
 
-                <p>Please select your favorite Web language:</p>
-                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-  <label for="vehicle1"> I have a bike</label><br>
-  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-  <label for="vehicle2"> I have a car</label><br>
-  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-  <label for="vehicle3"> I have a boat</label><br><br>
+                <p>O que é Tipico da Cidade de Lisboa</p>
+                <input type="checkbox" id="vinho do porto" name="vehicle1" value="Vinho do Porto">
+  <label for="vinho do porto"> I have a bike</label><br>
+  <input type="checkbox" id="ginjinha" name="vehicle2" value="Ginjinha">
+  <label for="ginjinha"> I have a car</label><br>
+  <input type="checkbox" id="calçada" name="vehicle3" value="Calçada Portuguesa">
+  <label for="calçada"> I have a boat</label><br><br>
   <input type="submit" value="Submit">
 
 
 
-<p>Please select your date:</p>
-<label for="birthday">Birthday:</label>
-  <input type="date" id="birthday" name="birthday">
+<p>Quando começou a ser construido o Mosteiro dos Jerónimos</p>
+<label for="Construção">Construção:</label>
+  <input type="date" id="Construção" name="Construção">
   <input type="submit">
 
 
 
 
-<p>Image:</p>
- <label for="fname">First name: </label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">Last name: </label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <input type="image" src="img_submit.gif" alt="Submit" width="48" height="48">
+<p>Qual o centro comercial que fica perto da Expo-Portugal?</p>
+ <label for="Centro Comercial">Centro Comercial: </label>
+  <select name="Centro Comercial" id="cars">
+    <option value="Vasco da Gama">Vasco da Gama</option>
+    <option value="Colombo">Colombo</option>
+    <option value="Strada Outlet">Strada Outlet</option>
+    <option value="UBBO">UBBO</option>
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">
 
-
-<p> Show a Color Picker</p>
+<p> De que cor é o Palácio de Belém? </p>
 
 <label for="favcolor">Select your favorite color:</label>
   <input type="color" id="favcolor" name="favcolor" value="#ff0000"><br><br>
   <input type="submit">
 
-<p> Number </p>
+<p> Quantos castelos tem em Lisboa? </p>
 
-<label for="quantity">Quantity (between 1 and 5):</label>
-  <input type="number" id="quantity" name="quantity" min="1" max="5">
+<label for="quantity">Castelos:</label>
+  <input type="number" id="quantity" name="quantity" min="1" max="10" size="2"  maxlength="2">
   <input type="submit">
 
 
-<p> Range </p>
+<p> Como classificas Lisboa? </p>
 
-<label for="vol">Volume (between 0 and 50):</label>
-  <input type="range" id="vol" name="vol" min="0" max="50">
+<label for="vol">Classificação (entre 0 e 5):</label>
+  <input type="range" id="vol" name="vol" min="0" max="5">
   <input type="submit">
 
 
