@@ -1,20 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="estilo.css">
     <meta charset="UTF-8">
     <title>Multimédia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="images/Green-Leaf.ico"/>
+
+
+    <style>
+
+
+/*
+id identificador unico nao podendo repetir codigo
+ */
+
+/*
+class
+QUANDO QUERO ESTILIZAR UM DETERMINADO ELEMENTO
+já na class podemos repetir o mesmo estilo com
+a class coisa que não é permitido no id
+
+ <br> dá quebras de linha
+
+ */
+
+
+
+*{
+    margin :0;
+    padding : 0;
+
+}
+
+#estilo_titulo1{
+    font-size: 40px;
+}
+
+
+
+.estilo_titulo2{
+
+    font-size: 35px;
+    color: rgba(0, 0, 0, 0.84);
+}
+
+
+
+.estilo_textop1{
+      font-size: 20px;
+    color: rgba(33, 28, 35, 0.84);
+}
+
+
+.coluna {
+    float: left;
+    width: 33.33%;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+    </style>
+
+
+
+
+
 </head>
-<body style="background-color:powderblue;">
-<h2> Multimédia</h2>
-<h3> Fotografias</h3>
-<img src="images/PN1.png">
-<img src="images/PN2.png">
-<img src="images/PN3.png">
-
-<p> Nesta página encontra conteúdos multimédia. Em baixo pode ver um video
-do Youtube que apresenta a cidade de Lisboa.</p>
-<iframe width="560" height="300" src="https://www.youtube.com/watch?v=lpABNSuifAk" ></iframe>
 
 
+
+
+
+<body style="background-color:#5f6291;">
+
+
+
+<div align="center">
+    <br>
+<h2 id="estilo_titulo1"> Multimédia</h2>
+    </br>
+    <br>
+<h3 class="estilo_titulo2"> Fotografias</h3>
+
+  </br>
+
+
+
+<div class="row">
+
+     <div class="coluna">
+         <img src="images/PN1.png" alt="descrição da imagem" style="width:77%">
+     </div>
+
+
+  <div class="coluna">
+       <img src="images/PN2.png" alt="descrição da imagem" style="width:67%">
+
+  </div>
+      <div class="coluna">
+        <img src="images/PN3.png" alt="descrição da imagem" style="width:60%">
+      </div>
+
+
+</div>
+
+
+
+
+
+<br>
+<br>
+    <h5 class="estilo_textop1"> Nesta página encontra conteúdos multimédia. Em baixo pode ver um video
+do Youtube que apresenta a cidade de Lisboa.
+    </h5>
+
+     </br>
+    </br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lpABNSuifAk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</div>
 </body>
 </html>

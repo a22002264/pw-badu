@@ -1,48 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="estilos.css">
     <meta charset="UTF-8">
     <title>Quizz</title>
     <link rel="shortcut icon" type="image/x-icon" href="image/Green-Leaf.ico"/>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+
+
+    <style>
+
+
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        #estilo_titulo1 {
+            font-size: 40px;
+        }
+
+
+        .estilo_titulo2 {
+
+            font-size: 35px;
+            color: rgba(0, 0, 0, 0.84);
+        }
+
+
+        .estilo_textop1 {
+            font-size: 20px;
+            color: rgba(33, 28, 35, 0.84);
+        }
+.estilo_textop2 {
+            font-size: 25px;
+
+        }
+
+.estilo_textop3 {
+            font-size: 20px;
+
+        }
+
+
+
+    </style>
 </head>
 
 
 <body style="background-color:powderblue;">
 <header>
-    <h3>Quizz</h3>
+    <h3 id="estilo_titulo1">Quizz</h3>
+
 </header>
 <main>
+     <br>
     <section>
+        <h5 class="estilo_textop1">
+            <br>
         <p>Nesta página irá ser apresentado um quizz para testar se conhece bem a cidade de Lisboa. Incluindo
             monumentos,
             gastronomia tipica, entre outras.</p>
+            </br>
+</h5>
     </section>
+       </br>
   <form method="POST" action="mailto: a22002264@alunos.ulht.pt" enctype="multipart/form-data">
         <fieldset>
-            <legend>Quizz sobre a cidade</legend>
+            <legend class="estilo_textop2">Quizz sobre a cidade</legend>
             <fieldset>
-                <legend>Info</legend>
+
+                <legend class="estilo_textop3">Info</legend>
+                 <br>
                 <p>Nome: <input type="text" name="nome"></p>
                 <p>Apelido: <input type="text" name="apelido"></p>
                 <p>Email: <input type="email" name="email"></p>
-
+ </br>
             </fieldset>
             <fieldset>
-                <legend>Perguntas da Cidade de Lisboa</legend>
+                       <br>
+                <legend class="estilo_textop3">Perguntas da Cidade de Lisboa</legend>
+                       </br>
                 <p>Onde fica o Panteão Nacional? <input type="text" name="r1" value="Insira Texto"></p>
 
-
+ <br>
                 <p>Quais destes rios faz parte de Lisboa?</p>
+                 </br>
                 <input type="radio" id="tejo" name="fav_language" value="Rio Tejo">
                 <label for="tejo">HTML</label><br>
                 <input type="radio" id="douro" name="fav_language" value="Rio Douro">
                 <label for="douro">CSS</label><br>
                 <input type="radio" id="guadiana" name="fav_language" value="Rio Guadiana">
                 <label for="guadiana">JavaScript</label>
-
+                 </br>
+ </br>
                 <br>
 
                 <p>O que é Tipico da Cidade de Lisboa</p>
+                 <br>
                 <input type="checkbox" id="vinho do porto" name="vehicle1" value="Vinho do Porto">
                 <label for="vinho do porto"> I have a bike</label><br>
                 <input type="checkbox" id="ginjinha" name="vehicle2" value="Ginjinha">
@@ -50,40 +109,50 @@
                 <input type="checkbox" id="calçada" name="vehicle3" value="Calçada Portuguesa">
                 <label for="calçada"> I have a boat</label><br><br>
                 <input type="submit" value="Submit">
-
-
+ </br>
+ <br>
                 <p>Quando começou a ser construido o Mosteiro dos Jerónimos</p>
+                 <br>
                 <label for="Construção">Construção:</label>
                 <input type="date" id="Construção" name="Construção">
                 <input type="submit">
-
-
+                 </br>
+ </br>
+ <br>
                 <p>Qual o centro comercial que fica perto da Expo-Portugal?</p>
+                 <br>
                 <label for="Centro Comercial">Centro Comercial: </label>
+                <br>
                 <select name="Centro Comercial" id="Centro Comercial">
                     <option value="Vasco da Gama">Vasco da Gama</option>
                     <option value="Colombo">Colombo</option>
                     <option value="Strada Outlet">Strada Outlet</option>
                     <option value="UBBO">UBBO</option>
                 </select>
-                <br><br>
+
                 <input type="submit" value="Submit">
+                 </br>
+ </br>
 
                 <p> De que cor é o Palácio de Belém? </p>
 
+ <br>
                 <label for="favcolor">Select your favorite color:</label>
-                <input type="color" id="favcolor" name="favcolor" value="#ff0000"><br><br>
+                <input type="color" id="favcolor" name="favcolor" value="#ff0000">
                 <input type="submit">
-
+                 </br>
+ <br>
                 <p> Quantos castelos tem em Lisboa? </p>
-
+ </br>
+                 <br>
                 <label for="quantity">Castelos:</label>
                 <input type="number" id="quantity" name="quantity" min="1" max="10" size="2" maxlength="2">
                 <input type="submit">
-
+                 </br>
+ <br>
 
                 <p> Como classificas Lisboa? </p>
-
+ </br>
                 <label for="vol">Classificação (entre 0 e 5):</label>
                 <input type="range" id="vol" name="vol" min="0" max="5">
                 <input type="submit">
@@ -91,12 +160,13 @@
             </fieldset>
 
         </fieldset>
-<fieldset> <legend>Opinião</legend>
-
+<fieldset> <legend  class="estilo_textop2">Opinião</legend>
+ <br>
             <label for="Lisboa">Observações sobre Lisboa:</label>
             <textarea id="Lisboa" name="w3review" rows="4" cols="50">
 
   </textarea>
+    </br>
             <br><br>
             <input type="submit" value="Submit"></fieldset>
 
@@ -108,11 +178,11 @@
 
 </main>
 
-
-<footer>
-    <p>Rodrigo Sousa, a22002264, Universidade de Lisboa de Humanidades e Tecnologias, 2022</p>
-
-</footer>
+ <footer>
+          <br>
+        <p>Rodrigo Sousa, a22002264, Universidade de Lisboa de Humanidades e Tecnologias, 2022</p>
+ </br>
+    </footer>
 </body>
 
 
