@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <title>Lab1</title>
     <link rel="shortcut icon" type="image/x-icon" href="imagens/Green-Leaf.ico"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-  <style>
 
+    <style>
+
+
+        * {
+            box-sizing: border-box;
+        }
 
         * {
             margin: 0;
@@ -34,48 +40,46 @@
             font-size: 20px;
             color: rgba(33, 28, 35, 0.84);
         }
-.estilo_textop2 {
+
+        .estilo_textop2 {
             font-size: 17px;
             color: rgb(255, 255, 255);
         }
 
-
-
+        .flex-container {
+            display: flex;
+            background-color: rgba(185, 233, 255, 0.84);
+        }
+        .flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
 
     </style>
 </head>
 
 
-
 <body style="background-color:rgba(99,161,125,0.84);">
 <header>
-    <h1  id="estilo_titulo1">A Internet e a Web</h1>
+    <h1 id="estilo_titulo1">Capitais europeias</h1>
 </header>
 <main>
-    <br>
-<section>
-    <nav>
-        <ul>
-            <br>
-            <li><a href="../lab1/index.html " class="estilo_textop2"> Introdução à programação Web </a></li>
-            </br>
-            <br>
-            <li><a href="../lab2/index.html " class="estilo_textop2"> Conhecer a Internet </a></li>
-            </br>
-            <br>
-            <li><a href=" ../index.html " class="estilo_textop2"> Laboratórios PW </a></li>
-             </br>
-        </ul>
-        </p >
-    </nav>
-     </br>
-</section>
+
+    <div class="flex-container"  >
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+
 </main>
 <footer>
-          <br>
-        <p>Rodrigo Sousa, a22002264, Universidade de Lisboa de Humanidades e Tecnologias, 2022</p>
- </br>
-    </footer>
+    <br>
+    <p>Rodrigo Sousa, a22002264, Universidade de Lisboa de Humanidades e Tecnologias, 2022</p>
+    </br>
+</footer>
 </body>
 
 </html>
