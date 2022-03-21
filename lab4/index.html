@@ -10,8 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="fotografias/Green-Leaf.ico"/>
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <style>
+
+        .material-icons.md-24 {
+            font-size: 24px;
+        }
 
 
         * {
@@ -34,7 +38,8 @@
             font-size: 35px;
             color: rgba(0, 0, 0, 0.84);
         }
- .estilo_titulo3 {
+
+        .estilo_titulo3 {
 
             font-size: 25px;
             color: rgba(0, 0, 0, 0.84);
@@ -45,11 +50,17 @@
             color: rgba(33, 28, 35, 0.84);
         }
 
-        .estilo_textop2 {
-            font-size: 17px;
-            color: rgba(0, 0, 0, 0.84);
+        .estilo_textop3 {
+
+            font-size: 20px;
+            color: rgb(255, 255, 255);
         }
 
+        .estilo_textop4 {
+
+            font-size: 17px;
+            color: rgb(255, 255, 255);
+        }
         .flex-container {
             display: flex;
             background-color: rgba(185, 233, 255, 0.84);
@@ -108,7 +119,7 @@
             /* espaça horizontalmente os items entre si de forma igual */
             align-content: space-around;
             /* espaça vericalmente os items entre si de forma igual */
-            background-color: rgb(238, 248, 248);
+            background-color: rgba(185, 233, 255, 0.84);
             padding: 50px;
 
         }
@@ -144,12 +155,6 @@
         }
 
 
-
-
-
-
-
-
         .box {
             background-image: url("../lab4/fotografias/imagemDeFundo.jpg");
             padding: 100px;
@@ -157,6 +162,94 @@
             justify-content: center;
             align-items: center;
         }
+
+        @media (min-width: 900px) {
+
+            .destinos {
+                gap: 5px 5px;
+                grid-template-areas:
+    'evora torresVedras'
+    'faro faro'
+    'braga vianaCastelo'
+    'budget budget'
+    'budget budget';
+            }
+        }
+ @media (min-width: 901px) {
+
+            .destinos {
+                gap: 5px 5px;
+                 grid-template-areas:
+    'evora torresVedras braga budget budget'
+    'faro faro vianaCastelo budget budget';
+            }
+        }
+
+        .destinos {
+
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            display: grid;
+            gap: 5px 5px;
+            background-color: rgba(185, 233, 255, 0.84);
+            padding: 10px;
+            grid-auto-flow: row;
+            grid-template-areas:
+    'evora torresVedras braga budget budget'
+    'faro faro vianaCastelo budget budget';
+        }
+
+        .evora {
+            grid-area: evora;
+            background-image: url("../lab4/fotografias/evora.jpg");
+        }
+
+        .torresVedras {
+            grid-area: torresVedras;
+            background-image: url("../lab4/fotografias/torresVedras.jpg");
+        }
+
+        .braga {
+            grid-area: braga;
+            background-image: url("../lab4/fotografias/braga.jpg");
+        }
+
+        .faro {
+            grid-area: faro;
+            background-image: url("../lab4/fotografias/faro.jpg");
+        }
+
+        .vianaCastelo {
+
+            grid-area: vianaCastelo;
+            background-image: url("../lab4/fotografias/vianaCastelo.jpg");
+        }
+
+
+        .budget {
+            grid-area: budget;
+        }
+
+        html, body, .destinos {
+            height: 100%;
+            margin: 0;
+        }
+
+        /* For presentation only, no need to copy the code below */
+
+
+        .destinos *:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+        }
+
+
     </style>
 </head>
 
@@ -185,116 +278,214 @@
 <div class="capitais">
     <div>
         <div><img src="fotografias\bruxelas.avif" alt=""></div>
-        <div><p>Bruxelas</p></div>
+         <div><h20 class="estilo_titulo3">Bruxelas</h20></div>
     </div>
     <div>
         <div><img src="fotografias\lisboa.avif" alt=""></div>
-        <div><p>Lisboa</p></div>
+         <div><h21 class="estilo_titulo3">Lisboa</h21></div>
     </div>
     <div>
         <div><img src="fotografias\budapeste.avif" alt=""></div>
-        <div><p>Budapeste</p></div>
+         <div><h22 class="estilo_titulo3">Budapeste</h22></div>
     </div>
     <div>
         <div><img src="fotografias\londres.avif" alt=""></div>
-        <div><p>Londres</p></div>
+         <div><h23 class="estilo_titulo3">Londres</h23></div>
     </div>
     <div>
         <div><img src="fotografias\milao.avif" alt=""></div>
-        <div><p>Milao</p></div>
+        <div><h24 class="estilo_titulo3">Milão</h24></div>
     </div>
     <div>
         <div><img src="fotografias\paris.avif" alt=""></div>
-        <div><p>Paris</p></div>
+        <div><h25 class="estilo_titulo3">Paris</h25></div>
     </div>
     <div>
         <div><img src="fotografias\praga.avif" alt=""></div>
-        <div><p>Praga</p></div>
+        <div><h26 class="estilo_titulo3">Praga</h26></div>
     </div>
     <div>
         <div><img src="fotografias\reykiavik.avif" alt=""></div>
-        <div><p>Reykiavik</p></div>
+       <div><h27 class="estilo_titulo3">Reykiavik</h27></div>
     </div>
     <div>
         <div><img src="fotografias\roma.avif" alt=""></div>
-        <div><p>Roma</p></div>
+        <div><h28 class="estilo_titulo3">Roma</h28></div>
     </div>
     <div>
         <div><img src="fotografias\varsovia.avif" alt=""></div>
-        <div><p>Varsovia</p></div>
+        <div><h29 class="estilo_titulo3">Varsóvia</h29></div>
     </div>
     <div>
         <div><img src="fotografias\viena.avif" alt=""></div>
-        <div><p>Viena</p></div>
+     <div><h30 class="estilo_titulo3">Viena</h30></div>
     </div>
 </div>
 <br>
 
-<h2 class="estilo_titulo2"> Dicas para Viajar</h2>
+<h2 class="estilo_titulo2"> Dicas para viajantes</h2>
 
 </br>
 
 <div class="flex-container">
     <div>
-<br>
-        <div><h2 class="estilo_titulo3"> Viaje Devagar</h2></div>
-            </br>
-         <div><p><h2 class="estilo_textop1"> Eu sempre fui fast traveller e levei mais de 1 ano e meio durante a minha viagem para entender os benefícios de viajar devagar. Viajar não é uma competição! Não é o número de países e cidades que você visita que vai fazer a diferença, mas sim como você vive cada dia da sua experiência.</p></h2></div>
+        <br>
+        <div><h2 class="estilo_titulo3"><i class="material-icons md-24">cloud</i> Viaje Devagar</h2></div>
+        </br>
+        <div><p>
+            <h2 class="estilo_textop1"> Eu sempre fui fast traveller e levei mais de 1 ano e meio durante a minha viagem
+                para entender os benefícios de viajar devagar. Viajar não é uma competição! Não é o número de países e
+                cidades que você visita que vai fazer a diferença, mas sim como você vive cada dia da sua
+                experiência.</p></h2></div>
     </div>
-      <div>
+    <div>
 
 
-
-<br>
-        <div><h2 class="estilo_titulo3"> Planeje, e não fique Paranôico!</h2></div>
-              </br>
-         <div><p><h2 class="estilo_textop1">Um certo planejamento faz bem, pra você não pegar -30 na Europa ou uma chuva torrencial por semanas no Sudeste asiático por exemplo, mas não fique paranóico tentando fazer o plano perfeito. Isso não existe. Existem muitas variáveis fora do seu controle e mesmo planejando você vai ter surpresas.</p></h2></div>
+        <br>
+        <div><h2 class="estilo_titulo3"><i class="material-icons md-24">cloud</i> Planeje, e não fique Paranôico!</h2>
+        </div>
+        </br>
+        <div><p>
+            <h2 class="estilo_textop1">Um certo planejamento faz bem, pra você não pegar -30 na Europa ou uma chuva
+                torrencial por semanas no Sudeste asiático por exemplo, mas não fique paranóico tentando fazer o plano
+                perfeito. Isso não existe. Existem muitas variáveis fora do seu controle e mesmo planejando você vai ter
+                surpresas.</p></h2></div>
     </div>
-      <div>
-<br>
-        <div><h2 class="estilo_titulo3"> Siga o seu coração</h2></div>
-              </br>
-         <div><p><h2 class="estilo_textop1">Pela primeira vez na sua vida você vai ser totalmente livre. Não deixe o seu planejamento te prender. Planos servem apenas como um norte e não como regras. Mude de idéia quantas vezes for preciso pra viver as experiências que você deseja de verdade. </p></h2></div>
+    <div>
+        <br>
+        <div><h2 class="estilo_titulo3"><i class="material-icons md-24">cloud</i> Siga o seu coração</h2></div>
+        </br>
+        <div><p>
+            <h2 class="estilo_textop1">Pela primeira vez na sua vida você vai ser totalmente livre. Não deixe o seu
+                planejamento te prender. Planos servem apenas como um norte e não como regras. Mude de idéia quantas
+                vezes for preciso pra viver as experiências que você deseja de verdade. </p></h2></div>
     </div>
-      <div>
-<br>
-        <div><h2 class="estilo_titulo3"> Relaxa e seja paciente</h2></div>
-              </br>
-          <div><p><h2 class="estilo_textop1"> Não adianta ficar se estressando com tudo que parece errado pra você. Você vai passar por culturas completamente diferentes da sua e eles fazem as coisas bem diferentes de você. Fato. Se você quiser que tudo seja do seu jeito, então fique em casa ao invés de explorar o mundo. </p></h2></div>
+    <div>
+        <br>
+        <div><h2 class="estilo_titulo3"><i class="material-icons md-24">cloud</i> Relaxa e seja paciente</h2></div>
+        </br>
+        <div><p>
+            <h2 class="estilo_textop1"> Não adianta ficar se estressando com tudo que parece errado pra você. Você vai
+                passar por culturas completamente diferentes da sua e eles fazem as coisas bem diferentes de você. Fato.
+                Se você quiser que tudo seja do seu jeito, então fique em casa ao invés de explorar o mundo. </p></h2>
+        </div>
     </div>
-      <div>
-<br>
-        <div><h2 class="estilo_titulo3"> Interaja com os locais</h2></div>
-              </br>
-          <div><p><h2 class="estilo_textop1">Essa é a melhor forma de conhecer uma cultura e também a mais interessante. Interagir com os locais vai te trazer descobertas incríveis e momentos memoráveis para a sua viagem. É o contato humano que faz a diferença, e dedicar tempo para interagir com as pessoas muitas vezes pode ser bem mais interessante do que visitar um ponto turístico.   </p></h2></div>
+    <div>
+        <br>
+        <div><h2 class="estilo_titulo3"><i class="material-icons md-24">cloud</i>Interaja com os locais</h2></div>
+        </br>
+        <div><p>
+            <h2 class="estilo_textop1">Essa é a melhor forma de conhecer uma cultura e também a mais interessante.
+                Interagir com os locais vai te trazer descobertas incríveis e momentos memoráveis para a sua viagem. É o
+                contato humano que faz a diferença, e dedicar tempo para interagir com as pessoas muitas vezes pode ser
+                bem mais interessante do que visitar um ponto turístico.   </p></h2></div>
     </div>
-      <div>
-<br>
-        <div><h2 class="estilo_titulo3">  Experimente</h2></div>
-              </br>
-         <div><p><h2 class="estilo_textop1">Experimente de tudo que passa pelo seu caminho,
-             mesmo aquelas coisas que te tiram da sua zona de conforto.
-             Quanto mais você experimentar maior será seu aprendizado,
-             você vai eliminar muitos preconceitos e mais descobertas vai fazer pra sua vida.</p></h2></div>
+    <div>
+        <br>
+        <div><h2 class="estilo_titulo3"><i class="material-icons md-24">cloud</i>Experimente</h2></div>
+        </br>
+        <div><p>
+            <h2 class="estilo_textop1">Experimente de tudo que passa pelo seu caminho,
+                mesmo aquelas coisas que te tiram da sua zona de conforto.
+                Quanto mais você experimentar maior será seu aprendizado,
+                você vai eliminar muitos preconceitos e mais descobertas vai fazer pra sua vida.</p></h2></div>
     </div>
-     <div>
-    <br>
-        <div><h2 class="estilo_titulo3"> Viaje Barato</h2></div>
-              </br>
-         <div><p><h2 class="estilo_textop1">Eu sempre digo que viajar barato não deve ser uma necessidade,
-             mas sim um interesse. Eu nunca tinha viajado tão barato antes da minha viagem de 2 anos pelo
-             mundo, mas após ter vivido essa experiência comecei a
-             perceber os benefícios que ela oferece.</p></h2></div>
+    <div>
+        <br>
+        <div><h2 class="estilo_titulo3"><i class="material-icons md-24">cloud</i>Viaje Barato</h2></div>
+        </br>
+        <div><p>
+            <h2 class="estilo_textop1">Eu sempre digo que viajar barato não deve ser uma necessidade,
+                mas sim um interesse. Eu nunca tinha viajado tão barato antes da minha viagem de 2 anos pelo
+                mundo, mas após ter vivido essa experiência comecei a
+                perceber os benefícios que ela oferece.</p></h2></div>
     </div>
- <div>
-    <br>
-        <div><h2 class="estilo_titulo3"> Não leve muita coisa</h2></div>
-              </br>
-         <div><p><h2 class="estilo_textop1">Eu sei que a maioria das pessoas não acredita, mas você não precisa de tanta coisa assim para viajar um ano ou mais. Esqueça o conceito de férias onde você leva roupa pra passear. Tudo o que você levar vai ter que carregar nas suas costas.</p></h2></div>
+    <div>
+        <br>
+        <div><h2 class="estilo_titulo3"><i class="material-icons md-24">cloud</i> Não leve muita coisa</h2></div>
+        </br>
+        <div><p>
+            <h2 class="estilo_textop1">Eu sei que a maioria das pessoas não acredita, mas você não precisa de tanta
+                coisa assim para viajar um ano ou mais. Esqueça o conceito de férias onde você leva roupa pra passear.
+                Tudo o que você levar vai ter que carregar nas suas costas.</p></h2></div>
     </div>
 
 
 </div>
+
+<br>
+
+<h3 class="estilo_titulo2">Destinos de sonho</h3>
+</br>
+
+<div class="destinos">
+    <div class="evora">
+
+        <h6 class="estilo_textop4"><p>Atividades</p></h6>
+
+        <h7 class="estilo_textop3"><p>Évora</p></h7>
+
+        <h8 class="estilo_textop3">É sede de distrito e de antiga diocese, sendo metrópole eclesiástica (Arquidiocese de
+            Évora).
+            O seu centro histórico bem-preservado é um dos mais ricos em monumentos de Portugal, o que lhe vale o
+            epíteto de Cidade-Museu.
+            </p></h8>
+
+    </div>
+
+
+    <div class="torresVedras">
+
+        <h6 class="estilo_textop4"><p>Economia</p></h6>
+        <h7 class="estilo_textop3"><p>Torres Vedras</p></h7>
+
+        <h8 class="estilo_textop3">ocalizado na Região Oeste, o território de Torres Vedras é povoado pelo homem desde
+            os tempos mais remotos.
+            Por aqui passaram comunidades de caçadores colectores, agricultores, metalúrgicos e, mais tarde, gregos e
+            romanos, como Rufo,
+            um de tantos nomes grafados na pedra que os imortalizou</p></h8>
+
+
+    </div>
+    <div class="braga">
+        <h6 class="estilo_textop4"><p>Passeios</p></h6>
+        <h7 class="estilo_textop3"><p>Braga</p></h7>
+
+        <h8 class="estilo_textop3">Braga apresenta lugares que, pela sua intrínseca devoção e beleza, se impõem como
+            marcos de obrigatória
+            referência e visita. O Santuário do Sameiro, o Bom Jesus e a Falperra, assentando numa apelativa base
+            religiosa,
+            rodeiam-se de extasiantes espaços verdes e paradisíacas paisagens.</p></h8>
+    </div>
+    <div class="faro">
+        <h6 class="estilo_textop4"><p>Praias e Lazer</p></h6>
+
+        <h7 class="estilo_textop3"><p>Faro</p></h7>
+
+        <h8 class="estilo_textop3">Faro não é um destino de férias tão procurado como Portimão,
+            Albufeira ou Lagos. Mas vale salientar, a capital algarvia possui inúmeros
+            atrativos que surpreendem a todos os seus visitantes: monumentos históricos,
+            museus, cultura local, gastronomia de qualidade, além de belas praias
+            integradas ao Parque Natural da Ria Formosa.
+            </p></h8>
+    </div>
+
+    <div class="vianaCastelo">
+        <h6 class="estilo_textop4"><p>Religião e História</p></h6>
+        <h7 class="estilo_textop3"><p>Viana do Castelo</p></h7>
+
+        <h8 class="estilo_textop3">Considerada como uma das cidades mais bonitas do Norte de Portugal,
+            Viana do Castelo é uma cidade vista por algumas publicações internacionais como “a joia da Costa Verde”,
+            ou seja, um ponto de paragem obrigatório no litoral norte do país.
+            </p></h8>
+
+    </div>
+
+    <div class="budget"></div>
+
+</div>
+
+
 <footer>
     <br>
     <p>Rodrigo Sousa, a22002264, Universidade de Lisboa de Humanidades e Tecnologias, 2022</p>
