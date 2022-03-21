@@ -3,13 +3,13 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
-    <title>Lab1</title>
+    <title>Capitais</title>
     <link rel="shortcut icon" type="image/x-icon" href="imagens/Green-Leaf.ico"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
+    <link rel="shortcut icon" type="image/x-icon" href="fotografias/Green-Leaf.ico"/>
 
     <style>
 
@@ -34,7 +34,11 @@
             font-size: 35px;
             color: rgba(0, 0, 0, 0.84);
         }
+ .estilo_titulo3 {
 
+            font-size: 25px;
+            color: rgba(0, 0, 0, 0.84);
+        }
 
         .estilo_textop1 {
             font-size: 20px;
@@ -43,38 +47,254 @@
 
         .estilo_textop2 {
             font-size: 17px;
-            color: rgb(255, 255, 255);
+            color: rgba(0, 0, 0, 0.84);
         }
 
         .flex-container {
             display: flex;
             background-color: rgba(185, 233, 255, 0.84);
         }
-        .flex-container > div {
-  background-color: #f1f1f1;
-  margin: 10px;
-  padding: 20px;
-  font-size: 30px;
-}
 
+        .flex-container > div {
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+            justify-content: space-around; /* espaça os items de forma igual */
+            border-radius: 20px;
+            /* arredonda os cantos */
+            box-shadow: 5px 5px 15px #888888; /* cria sombra */
+
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        nav a {
+            padding: 20px;
+            background-color: rgba(28, 61, 94, 0.84);
+            margin: 2px;
+            text-decoration: none;
+            color: #ffffff;
+            box-shadow: 2px 3px 3px lightgrey;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: rgba(98, 92, 92, 0.84);
+            font-weight: bold
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav a:last-child {
+            margin-left: auto;
+            background-color: dodgerblue;
+            color: white;
+            border-radius: 10px;
+        }
+
+
+        .capitais {
+            display: flex;
+            flex-flow: row wrap;
+            /* caixas dispostas em linha e fazendo quebra de linha se necessário */
+            justify-content: space-around;
+            /* espaça horizontalmente os items entre si de forma igual */
+            align-content: space-around;
+            /* espaça vericalmente os items entre si de forma igual */
+            background-color: rgb(238, 248, 248);
+            padding: 50px;
+
+        }
+
+        .capitais > div {
+            /* este selector identifica todos os elementos div "filhos" do elemento com classe capitais */
+            display: flex;
+            justify-content: space-around; /* espaça os items de forma igual */
+            border-radius: 20px;
+            /* arredonda os cantos */
+            box-shadow: 5px 5px 15px #888888; /* cria sombra */
+            margin: 10px;
+            /* garante um espaçamento mínimo entre elementos */
+        }
+
+        .capitais img {
+            /* este selector identifica todas as imagens dentro do elemento com classe capitais: (elementos imagem dentro de elemento com classe capitais) */
+            border-radius: 20px 0 0 20px; /* arredonda 1º canto (superior à esq.) e 4º canto */
+            height: 100%;
+        }
+
+        .capitais div div:last-child {
+            /* este selector identifica os divs com o parágrafo com nome da capital (ultimo div filho de cada div dentro do elemento com classe capitais) */
+            width: 150px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 0 20px 20px 0; /* arredonda 29 e 3º canto */
+            /* para centrar nome da capital na caixa (horizontal e vertical) */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+
+
+
+
+
+
+        .box {
+            background-image: url("../lab4/fotografias/imagemDeFundo.jpg");
+            padding: 100px;
+            margin: 100px;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
 
 
-<body style="background-color:rgba(99,161,125,0.84);">
-<header>
-    <h1 id="estilo_titulo1">Capitais europeias</h1>
-</header>
-<main>
+<body style="background-color:rgba(99,161,125,0.84)">
 
-    <div class="flex-container"  >
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
+<br>
+<h1 id="estilo_titulo1">Capitais Europeias </h1>
+</br>
+<br>
+<nav>
+    <a href="">Cidades europeias</a>
+    <a href="">Dicas para viajar</a>
+    <a href="">Destinos de sonho</a>
+    <a href=" ../index.html ">Sign-in</a>
+</nav>
+
+</br>
+
+<br>
+
+<h2 class="estilo_titulo2"> Cidades Europeias</h2>
+
+</br>
+
+<div class="capitais">
+    <div>
+        <div><img src="fotografias\bruxelas.avif" alt=""></div>
+        <div><p>Bruxelas</p></div>
+    </div>
+    <div>
+        <div><img src="fotografias\lisboa.avif" alt=""></div>
+        <div><p>Lisboa</p></div>
+    </div>
+    <div>
+        <div><img src="fotografias\budapeste.avif" alt=""></div>
+        <div><p>Budapeste</p></div>
+    </div>
+    <div>
+        <div><img src="fotografias\londres.avif" alt=""></div>
+        <div><p>Londres</p></div>
+    </div>
+    <div>
+        <div><img src="fotografias\milao.avif" alt=""></div>
+        <div><p>Milao</p></div>
+    </div>
+    <div>
+        <div><img src="fotografias\paris.avif" alt=""></div>
+        <div><p>Paris</p></div>
+    </div>
+    <div>
+        <div><img src="fotografias\praga.avif" alt=""></div>
+        <div><p>Praga</p></div>
+    </div>
+    <div>
+        <div><img src="fotografias\reykiavik.avif" alt=""></div>
+        <div><p>Reykiavik</p></div>
+    </div>
+    <div>
+        <div><img src="fotografias\roma.avif" alt=""></div>
+        <div><p>Roma</p></div>
+    </div>
+    <div>
+        <div><img src="fotografias\varsovia.avif" alt=""></div>
+        <div><p>Varsovia</p></div>
+    </div>
+    <div>
+        <div><img src="fotografias\viena.avif" alt=""></div>
+        <div><p>Viena</p></div>
+    </div>
+</div>
+<br>
+
+<h2 class="estilo_titulo2"> Dicas para Viajar</h2>
+
+</br>
+
+<div class="flex-container">
+    <div>
+<br>
+        <div><h2 class="estilo_titulo3"> Viaje Devagar</h2></div>
+            </br>
+         <div><p><h2 class="estilo_textop1"> Eu sempre fui fast traveller e levei mais de 1 ano e meio durante a minha viagem para entender os benefícios de viajar devagar. Viajar não é uma competição! Não é o número de países e cidades que você visita que vai fazer a diferença, mas sim como você vive cada dia da sua experiência.</p></h2></div>
+    </div>
+      <div>
+
+
+
+<br>
+        <div><h2 class="estilo_titulo3"> Planeje, e não fique Paranôico!</h2></div>
+              </br>
+         <div><p><h2 class="estilo_textop1">Um certo planejamento faz bem, pra você não pegar -30 na Europa ou uma chuva torrencial por semanas no Sudeste asiático por exemplo, mas não fique paranóico tentando fazer o plano perfeito. Isso não existe. Existem muitas variáveis fora do seu controle e mesmo planejando você vai ter surpresas.</p></h2></div>
+    </div>
+      <div>
+<br>
+        <div><h2 class="estilo_titulo3"> Siga o seu coração</h2></div>
+              </br>
+         <div><p><h2 class="estilo_textop1">Pela primeira vez na sua vida você vai ser totalmente livre. Não deixe o seu planejamento te prender. Planos servem apenas como um norte e não como regras. Mude de idéia quantas vezes for preciso pra viver as experiências que você deseja de verdade. </p></h2></div>
+    </div>
+      <div>
+<br>
+        <div><h2 class="estilo_titulo3"> Relaxa e seja paciente</h2></div>
+              </br>
+          <div><p><h2 class="estilo_textop1"> Não adianta ficar se estressando com tudo que parece errado pra você. Você vai passar por culturas completamente diferentes da sua e eles fazem as coisas bem diferentes de você. Fato. Se você quiser que tudo seja do seu jeito, então fique em casa ao invés de explorar o mundo. </p></h2></div>
+    </div>
+      <div>
+<br>
+        <div><h2 class="estilo_titulo3"> Interaja com os locais</h2></div>
+              </br>
+          <div><p><h2 class="estilo_textop1">Essa é a melhor forma de conhecer uma cultura e também a mais interessante. Interagir com os locais vai te trazer descobertas incríveis e momentos memoráveis para a sua viagem. É o contato humano que faz a diferença, e dedicar tempo para interagir com as pessoas muitas vezes pode ser bem mais interessante do que visitar um ponto turístico.   </p></h2></div>
+    </div>
+      <div>
+<br>
+        <div><h2 class="estilo_titulo3">  Experimente</h2></div>
+              </br>
+         <div><p><h2 class="estilo_textop1">Experimente de tudo que passa pelo seu caminho,
+             mesmo aquelas coisas que te tiram da sua zona de conforto.
+             Quanto mais você experimentar maior será seu aprendizado,
+             você vai eliminar muitos preconceitos e mais descobertas vai fazer pra sua vida.</p></h2></div>
+    </div>
+     <div>
+    <br>
+        <div><h2 class="estilo_titulo3"> Viaje Barato</h2></div>
+              </br>
+         <div><p><h2 class="estilo_textop1">Eu sempre digo que viajar barato não deve ser uma necessidade,
+             mas sim um interesse. Eu nunca tinha viajado tão barato antes da minha viagem de 2 anos pelo
+             mundo, mas após ter vivido essa experiência comecei a
+             perceber os benefícios que ela oferece.</p></h2></div>
+    </div>
+ <div>
+    <br>
+        <div><h2 class="estilo_titulo3"> Não leve muita coisa</h2></div>
+              </br>
+         <div><p><h2 class="estilo_textop1">Eu sei que a maioria das pessoas não acredita, mas você não precisa de tanta coisa assim para viajar um ano ou mais. Esqueça o conceito de férias onde você leva roupa pra passear. Tudo o que você levar vai ter que carregar nas suas costas.</p></h2></div>
     </div>
 
 
-</main>
+</div>
 <footer>
     <br>
     <p>Rodrigo Sousa, a22002264, Universidade de Lisboa de Humanidades e Tecnologias, 2022</p>
