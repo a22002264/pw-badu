@@ -57,7 +57,17 @@
 
         }
 
+        .posicao {
+            position: relative;
+            top: 100%;
+            transform: translateY(-100%);
+        }
 
+        /*
+           position: absolute;
+                    bottom: 8px;
+                    right: 16px;
+         */
         .estilo_textop4 {
 
             font-size: 17px;
@@ -158,10 +168,19 @@
         }
 
 
-        .destinos {
+        .box {
+            background-image: url("../lab5/foto/imagemDeFundo.jpg");
+            padding: 100px;
+            margin: 100px;
+            justify-content: center;
+            align-items: center;
+        }
 
 
-            display: grid;
+      .destinos {
+
+
+                   display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr;
             grid-gap: 10px;
@@ -173,11 +192,15 @@
     'faro faro vianaCastelo budget budget';
         }
 
-
-        .posicaoTexto {
+        .destinos *:after {
             position: relative;
-            top: 100%;
-            transform: translateY(-100%);
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
         }
 
 
@@ -216,7 +239,6 @@
             background-repeat: no-repeat;
             background-size: cover;
         }
-
         .budget {
             grid-area: budget;
         }
@@ -252,67 +274,67 @@
 
 <div class="capitais">
     <div>
-        <div><img src="fotografias\bruxelas.avif" alt=""></div>
+        <div><img src="foto\bruxelas.avif" alt=""></div>
         <div>
             <h1 class="estilo_titulo3">Bruxelas</h1>
         </div>
     </div>
     <div>
-        <div><img src="fotografias\lisboa.avif" alt=""></div>
+        <div><img src="foto\lisboa.avif" alt=""></div>
         <div>
             <h1 class="estilo_titulo3">Lisboa</h1>
         </div>
     </div>
     <div>
-        <div><img src="fotografias\budapeste.avif" alt=""></div>
+        <div><img src="foto\budapeste.avif" alt=""></div>
         <div>
             <h1 class="estilo_titulo3">Budapeste</h1>
         </div>
     </div>
     <div>
-        <div><img src="fotografias\londres.avif" alt=""></div>
+        <div><img src="foto\londres.avif" alt=""></div>
         <div>
             <h1 class="estilo_titulo3">Londres</h1>
         </div>
     </div>
     <div>
-        <div><img src="fotografias\milao.avif" alt=""></div>
+        <div><img src="foto\milao.avif" alt=""></div>
         <div>
             <h1 class="estilo_titulo3">Milão</h1>
         </div>
     </div>
     <div>
-        <div><img src="fotografias\paris.avif" alt=""></div>
+        <div><img src="foto\paris.avif" alt=""></div>
         <div>
             <h1 class="estilo_titulo3">Paris</h1>
         </div>
     </div>
     <div>
-        <div><img src="fotografias\praga.avif" alt=""></div>
+        <div><img src="foto\praga.avif" alt=""></div>
         <div>
             <h1 class="estilo_titulo3">Praga</h1>
         </div>
     </div>
     <div>
-        <div><img src="fotografias\reykiavik.avif" alt=""></div>
+        <div><img src="foto\reykiavik.avif" alt=""></div>
         <div>
             <h1 class="estilo_titulo3">Reykiavik</h1>
         </div>
     </div>
     <div>
-        <div><img src="fotografias\roma.avif" alt=""></div>
+        <div><img src="foto\roma.avif" alt=""></div>
         <div>
             <h1 class="estilo_titulo3">Roma</h1>
         </div>
     </div>
     <div>
-        <div><img src="fotografias\varsovia.avif" alt=""></div>
+        <div><img src="foto\varsovia.avif" alt=""></div>
         <div>
             <h1 class="estilo_titulo3">Varsóvia</h1>
         </div>
     </div>
     <div>
-        <div><img src="fotografias\viena.avif" alt=""></div>
+        <div><img src="foto\viena.avif" alt=""></div>
         <div>
             <h1 class="estilo_titulo3">Viena</h1>
         </div>
@@ -339,7 +361,7 @@
 
 
         <br>
-        <div class="estilo_titulo3"><i class="material-icons md-24">cloud</i> Planeje, e não fique Paranôico!</div>
+        <div class="estilo_titulo3"><i class="material-icons md-24">cloud</i> Planeje, e não fique Paranôico! </div>
 
         </br>
         <div class="estilo_textop1"><p>
@@ -359,7 +381,7 @@
     </div>
     <div>
         <br>
-        <div class="estilo_titulo3"><i class="material-icons md-24">cloud</i> Relaxa e seja paciente</div>
+       <div class="estilo_titulo3"><i class="material-icons md-24">cloud</i> Relaxa e seja paciente</div>
         </br>
         <div class="estilo_textop1"><p>
             Não adianta ficar se estressando com tudo que parece errado pra você. Você vai
@@ -417,88 +439,82 @@
 
 <div class="destinos">
     <div class="evora">
-        <div class="posicaoTexto">
-            <p class="estilo_textop4">Atividades</p>
-            <p class="estilo_textop3">Évora</p>
-            <h4 class="estilo_textop3">É sede de distrito e de antiga diocese, sendo metrópole eclesiástica
-                (Arquidiocese de
-                Évora).
-                O seu centro histórico bem-preservado é um dos mais ricos em monumentos de Portugal, o que lhe vale
-                o
-                epíteto de Cidade-Museu.
-            </h4>
+
+
+            <div class="estilo_textop4"><p>Atividades</p></div>
+
+            <div class="estilo_textop3"><p>Évora</p></div>
+
+            <div class="estilo_textop3">
+                <h4>É sede de distrito e de antiga diocese, sendo metrópole eclesiástica (Arquidiocese de
+                    Évora).
+                    O seu centro histórico bem-preservado é um dos mais ricos em monumentos de Portugal, o que lhe vale
+                    o
+                    epíteto de Cidade-Museu.
+                </h4></div>
+
+
+
+    </div>
+
+
+
+        <div class="torresVedras">
+
+            <div class="estilo_textop4"><p>Economia</p></div>
+            <div class="estilo_textop3"><p>Torres Vedras</p></div>
+
+            <div class="estilo_textop3"><p>Localizado na Região Oeste, o território de Torres Vedras é povoado pelo
+                homem
+                desde
+                os tempos mais remotos.
+                Por aqui passaram comunidades de caçadores colectores, agricultores, metalúrgicos e, mais tarde, gregos
+                e
+                romanos, como Rufo,
+                um de tantos nomes grafados na pedra que os imortalizou</p></div>
         </div>
 
 
-    </div>
 
 
-    <div class="torresVedras">
+        <div class="braga">
+            <div class="estilo_textop4"><p>Passeios</p></div>
+            <div class="estilo_textop3"><p>Braga</p></div>
 
-
-        <div class="posicaoTexto">
-            <p class="estilo_textop4">Economia</p>
-            <p class="estilo_textop3">Torres Vedras</p>
-            <h4 class="estilo_textop3">Localizado na Região Oeste, o território de Torres Vedras é povoado pelo
-                homem desde os tempos mais remotos. Por aqui passaram comunidades de caçadores colectores, agricultores,
-                metalúrgicos e, mais tarde, gregos e romanos, como Rufo,
-                um de tantos nomes grafados na pedra que os imortalizou</h4>
+            <div class="estilo_textop3"><p>Braga apresenta lugares que, pela sua intrínseca devoção e beleza, se impõem
+                como
+                marcos de obrigatória
+                referência e visita. O Santuário do Sameiro, o Bom Jesus e a Falperra, assentando numa apelativa base
+                religiosa,
+                rodeiam-se de extasiantes espaços verdes e paradisíacas paisagens.</p></div>
         </div>
-    </div>
 
+        <div class="faro">
+            <div class="estilo_textop4"><p>Praias e Lazer</p></div>
 
-    <div class="braga">
+            <div class="estilo_textop3"><p>Faro</p></div>
 
+            <div class="estilo_textop3"><p>Faro não é um destino de férias tão procurado como Portimão,
+                Albufeira ou Lagos. Mas vale salientar, a capital algarvia possui inúmeros
+                atrativos que surpreendem a todos os seus visitantes: monumentos históricos,
+                museus, cultura local, gastronomia de qualidade, além de belas praias
+                integradas ao Parque Natural da Ria Formosa.
+            </p></div>
+            </div>
 
-        <div class="posicaoTexto">
-            <p class="estilo_textop4">Passeios</p>
-            <p class="estilo_textop3">Braga</p>
-            <h4 class="estilo_textop3">Braga apresenta lugares que, pela sua intrínseca devoção e beleza, se impõem
-            como
-            marcos de obrigatória
-            referência e visita. O Santuário do Sameiro, o Bom Jesus e a Falperra, assentando numa apelativa base
-            religiosa,
-            rodeiam-se de extasiantes espaços verdes e paradisíacas paisagens.</h4>
+        <div class="vianaCastelo">
+            <div class="estilo_textop4"><p>Religião e História</p></div>
+            <div class="estilo_textop3"><p>Viana do Castelo</p></div>
+
+            <div class="estilo_textop3"><p>Considerada como uma das cidades mais bonitas do Norte de Portugal,
+                Viana do Castelo é uma cidade vista por algumas publicações internacionais como “a joia da Costa Verde”,
+                ou seja, um ponto de paragem obrigatório no litoral norte do país.
+            </p></div>
         </div>
-    </div>
 
 
 
-
-    <div class="faro">
-
-
-        <div class="posicaoTexto">
-            <p class="estilo_textop4">Praias e Lazer</p>
-            <p class="estilo_textop3">Faro</p>
-            <h4 class="estilo_textop3">Faro não é um destino de férias tão procurado como Portimão,
-            Albufeira ou Lagos. Mas vale salientar, a capital algarvia possui inúmeros
-            atrativos que surpreendem a todos os seus visitantes: monumentos históricos,
-            museus, cultura local, gastronomia de qualidade, além de belas praias
-            integradas ao Parque Natural da Ria Formosa.</h4>
-        </div>
-    </div>
-
-
-
-
-    <div class="vianaCastelo">
-
-
-        <div class="posicaoTexto">
-            <p class="estilo_textop4">Religião e História</p>
-            <p class="estilo_textop3">Viana do Castelo</p>
-            <h4 class="estilo_textop3">Considerada como uma das cidades mais bonitas do Norte de Portugal,
-            Viana do Castelo é uma cidade vista por algumas publicações internacionais como “a joia da Costa Verde”,
-            ou seja, um ponto de paragem obrigatório no litoral norte do país.</h4>
-        </div>
-    </div>
-
-
-
-
-    <div class="budget">
-    </div>
+        <div class="budget"></div>
 
 </div>
 
