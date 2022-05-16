@@ -6,73 +6,15 @@
     font-size: 24px;
 }
 
-.background {
-    background: black;
-}
 
 * {
     box-sizing: border-box;
-     padding: 0;
+}
+
+* {
     margin: 0;
+    padding: 0;
 
-}
-
-
-main > div {
-    /* centrando o <p> dos divs */
-    height: 100vh;
-
-}
-
-/* div "menu" */
-div:first-child {
-    /* O menu está sticky e ocupa 10vh da altura do viewport */
-    height: 10vh;
-    background: black;
-    color: white;
-    position: relative;
-    top: 0;
-}
-
-/*  segundo div, "hero image" */
-div:nth-child(2) {
-    /* como o menu ocupa 10vh, este tem 90vh para o vermo inteiro. */
-    height: 90vh;
-    background-image: url("https://source.unsplash.com/v_1xrpi-_uU");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-/* terceiro div, "div seguinte" */
-div:nth-child(3) {
-    /* definindo altura e cor */
-    height: 90vh;
-    background: orange;
-
-
-}
-
-
-
-/* penultimo div: background-attachment: fixed */
-div:nth-last-child(2) {
-    /* como tem menu e rodapé visíveis (10vh cada), define-se como altura 80vh. */
-    height: 80vh;
-    background-image: url("https://source.unsplash.com/GB1JI9CLzHs");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    align-items: start;
-}
-
-/* ultimo div */
-div:last-child {
-    /* definindo altura e cor */
-    height: 10vh;
-    background: black;
-    color: white;
 }
 
 #estilo_titulo1 {
@@ -320,6 +262,19 @@ nav a:last-child {
 
 .bottomBudget {
     grid-area: bottomBudget;
+}
+
+.background {
+    background-image: url("foto/imagemDeFundo.jpg");
+    position: sticky;
+  top: 0;
+  left: 0;
+    background-repeat: no-repeat;
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+
 }
 
 .posicaoBudget {
