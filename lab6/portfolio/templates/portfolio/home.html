@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-<!-- home.html -->
 
-{% extends 'portfolio/static/layout.html' %}
+
+<!-- home.html -->
+{% extends 'portfolio/layout.html' %}
 
 {% block main %}
  <h3>Introdução</h3>
@@ -14,7 +14,7 @@
                 {% endfor %}
         </ul>
         {% load static %}
-        <img src="{% static 'portfolio/static/portfolio/images/imagemAgosto.jpg' %}" alt="">
+        <img src="{% static 'portfolio/../../static/portfolio/images/' %}" alt="">
 
         <p>
                 {% if hora > 12 %}
