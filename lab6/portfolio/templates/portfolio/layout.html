@@ -10,96 +10,340 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-
-    <style>
-        .first-info {
-
-            background-image: url("{% static 'portfolio/images/exemplo.jpg' %}");
-            background-repeat: no-repeat;
-            background-size: cover;
-
-        }
-
-
-    </style>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 
-<body class=first-info>
+<body style="background-color:rgba(114,114,114,0.84)">
 
-
-<header>
-    <nav>
+<header class="first-info sticky" id="header-id">
+    <nav id="nav-id">
         <div class="nav-container">
-            <a href="index.html">
-                <img id="logo" src="img/logo.jpg" alt="RodrigoSousa">
+            <a href="layout.html">
+
             </a>
-            <i class="fas fa-bars btn-menumobile"></i>
             <ul>
                 <li><a href=#topo">Início</a></li>
-                <li><a href="#sobreMim">Sobre mim</a></li>
-                <li><a href="">Carta de Recomendação</a></li>
-                <li><a href="">Progresso Académico</a></li>
-                <li><a href="">Projetos</a></li>
-                <li><a href="">Programação Web</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a onclick=scrollToView("sobreMim")>Sobre mim</a></li>
+                <li><a onclick=scrollToView("CartaRecomendacao")>Carta de Recomendação</a></li>
+                <li><a onclick=scrollToView("ProgressoAcademico")>Progresso Académico</a></li>
+                <li><a onclick=scrollToView("Projetos")>Projetos</a></li>
+                <li><a onclick=scrollToView("ProgramacaoWeb")>Programação Web</a></li>
+                <li><a href="{% url 'portfolio:quizz' %}" class="estilo_textop2">Quizz</a></li>
+                <li><a onclick=scrollToView("rodape")>Contato</a></li>
             </ul>
         </div>
     </nav>
 </header>
 
-<main id="lastjobs-container" class="wrapper">
-<div id="topo">
-
-</div>
-
-<div id="sobreMim" class="first-info">
-    <h2>Licenciatura</h2>
+<main>
+    <div id="padding-div"></div>
+    <section id="sobreMim">
 
 
-</div>
+        <div class="section-container">
 
-	</main>
-<footer>
-    <div class="wrapper">
-        <div class="footer-box">
-            <h2> Redes Sociais</h2>
+
+            <div class="section-licenciatura">
+
+                <div class="portfolioRodrigo">
+                    <div class="img-container">
+                        <img src="{% static 'portfolio/images/fotoP.jpeg' %}" alt="Rodrigo Sousa">
+
+                    </div>
+
+                    <div class="ensinoBasicoeSecundario">
+
+                        <h2 class="estilo_textop9">As minhas experiências pessoais e profissionais permitiram
+                            desenvolver
+                            capacidades comunicativas, de liderança e de trabalho em equipa.
+                            Para além destas características, assumo um elevado interesse por áreas como
+                            informática, desporto, música e fotografia.</h2>
+                        <h2 class="estilo_textop9">
+                            Ao longo dos últimos anos tenho aliado à minha paixão pelo desporto, em especial por
+                            ginásio e kempo. As viagens também são para mim um hobby. Para além do nosso país, já
+                            tive a oportunidade de visitar Espanha e Cabo Verde.</h2>
+
+
+                    </div>
+                </div>
+            </div>
+
 
         </div>
-        <div class="footer-box">
-            <h2> Redes Sociais</h2>
-            <ul class="footer-list">
+
+    </section>
+ <section id="Informatica">
+        <div class="section-container">
+            <h2 class="estilo_titulo2"> Aptidões e competências pessoais</h2>
+            <div class="section-container">
+
+                <h2 class="estilo_titulo8"> Informática/Digital</h2>
+
+
+                <div class="educacaoTopicos">
+
+                    <ul>
+                        <li>Domínio em Linguagens de Programação, como: Java, C, Assembly e Kotlin</li>
+                        <li>Domínio na utilização e programação em Arduinos.</li>
+                        <li>Workshop “Cybers3c-Tecweb2021”</li>
+                        <li>Domínio das Ferramentas de Office: Word e Powerpoint</li>
+                    </ul>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="section-container">
+
+
+                <h2 class="estilo_textop4"> Cultura</h2>
+
+                <div class="educacaoTopicos">
+
+                    <ul>
+                        <li>Sociedade Euterpe Alhandrense (Piano e coro) (2009-2011).</li>
+                        <li>Instrumentos Musicais, Grupo Recreativo Desportivo Arrudense (Viola)-
+                            (2009-2010)
+                        </li>
+                    </ul>
+
+
+                </div>
+
+
+            </div>
+            <div class="section-container">
+
+                <h2 class="estilo_textop4">Desporto</h2>
+
+
+                <div class="educacaoTopicos">
+
+
+                    <ul>
+                        <li>Natação, em Sobral de Monte Agraço (2001-2007)</li>
+                        <li>Futebol, Grupo Recreativo Desportivo Arrudense (2008-2009)</li>
+                        <li>Kempo, Grupo Recreativo Desportivo Arrudense (2009-2011) e (2017-2019)</li>
+                        <li>Ténis, Grupo Recreativo Desportivo Arrudense (2016-2017)</li>
+                        <li>Ginásio - (2019-atualmente)</li>
+                    </ul>
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section id="ProgressoAcademico">
+
+        <div class="section-container">
+            <h2 class="estilo_titulo2"> Progresso Académico</h2>
+
+            <div class="section-container">
+                <h2 class="estilo_ProgressoAcademico"> Educação</h2>
+                <div class="section-container">
+
+
+                    <div class="section-licenciatura">
+                        <p>Frequentou o Ensino Básico no Centro Escolar de Arranhó, até ao final do 2º ciclo escolar.
+                            Passando a frequentar o Externato João Alberto Faria onde completou o 3º ciclo.
+                            Completou o Ensino Secundário do Curso de Ciências e Tecnologia no Externato João Alberto
+                            Faria.Arruda dos Vinhos – Setembro de 2016 a Julho de 2019. Média final: 13 valores.</p>
+                    </div>
+                </div>
+                <h2 class="estilo_ProgressoAcademico">Licenciatura</h2>
+                <div class="section-container">
+
+
+                    <div class="section-licenciatura">
+                        <p>O curso de licenciatura em Engenharia Informática da Universidade Lusófona forma licenciados
+                            capazes de assumir posições de destaque em projetos de engenharia informática ou equipas de
+                            desenvolvimento e
+                            consultadoria, na área da engenharia dos sistemas de informação, assumindo pela sua formação
+                            e
+                            atitude
+                            papéis relevantes na geração de inovação e riqueza. Nesse sentido, os estudantes obtêm as
+                            competências
+                            adequadas à conceção, realização e manutenção de sistemas informáticos, programação de
+                            aplicações e
+                            de
+                            sistemas, desenho arquiteturas de computação e comunicações, gestão de sistemas de
+                            informação e
+                            de
+                            conhecimento, assim como à compreensão e resolução dos problemas associados.</p>
+                    </div>
+                </div>
+                <h2 class="estilo_ProgressoAcademico"> Cadeiras</h2>
+                <div class="section-container">
+                    <div class="section-cadeiras">
+
+                        <div class="cadeiras">
+                            <div class="educacaoTopicos" style="background-color:rgb(61,64,94)">
+                                <h2 class="estilo_textop4"> 1º Ano</h2>
+                                <ul>
+                                    <li>Fundamentos de Física</li>
+                                    <li>Fundamentos de Programação</li>
+                                    <li>Matemática Discreta</li>
+                                    <li>Matemática I</li>
+                                    <li>Sistemas Digitais</li>
+                                    <li>Álgebra Linear</li>
+                                    <li>Algoritmia e Estruturas de Dados</li>
+                                    <li>Arquitetura de Computadores</li>
+                                    <li>Competências Comportamentais</li>
+                                    <li>Linguagens de Programação I</li>
+                                    <li>Matemática II</li>
+                                </ul>
+                            </div>
+                            <div class="educacaoTopicos" style="background-color:rgb(61,64,94)">
+                                <h2 class="estilo_textop4"> 2º Ano</h2>
+                                <ul>
+                                    <li>Arquiteturas Avançadas de Computadores</li>
+                                    <li>Bases de Dados</li>
+                                    <li>Linguagens de Programação II</li>
+                                    <li>Sinais e Sistemas</li>
+                                    <li>Sistemas Operativos</li>
+                                    <li>Computação Gráfica</li>
+                                    <li>Engenharia de Requisitos e Testes</li>
+                                    <li>Programação Web</li>
+                                    <li>Redes de Computadores</li>
+                                    <li>Sistemas de Suporte à Decisão</li>
+                                </ul>
+                            </div>
+                            <div class="educacaoTopicos" style="background-color:rgb(61,64,94)">
+                                <h2 class="estilo_textop4"> 3º Ano</h2>
+                                <ul>
+                                    <li>Trabalho Final de Curso</li>
+                                    <li>Computação Distribuída</li>
+                                    <li>Data Science</li>
+                                    <li>Engenharia de Software</li>
+                                    <li>Interação Humano-Máquina</li>
+                                    <li>Computação Móvel</li>
+                                    <li>Inteligência Artificial</li>
+                                    <li>Segurança Informática</li>
+                                    <li>Sistemas de Informação na Nuvem</li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section id="ProgramacaoWeb">
+        <div class="section-container">
+            <h2 class="estilo_titulo2"> Curiosidades sobre Programação Web</h2>
+            <div class="section-container">
+
+
+                <div class="section-licenciatura">
+                    <div>
+
+                        <div>
+                            <h2 class="estilo_programacaoweb">front-end </h2>
+                            <ul>
+                                <li>O desenvolvedor front-end é responsável pela experiência do usuário dentro de uma
+                                    aplicação web, é ele quem vai desenhar e desenvolver as páginas com as quais,
+                                    posteriormente, o usuário irá interagir.
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 class="estilo_programacaoweb">back-end </h2>
+                            <ul>
+                                <li>Em uma aplicação web, este desenvolvedor, quando focado, não toca na parte visual da
+                                    aplicação. Por lidar com a regra de negócio, as vezes um programador de sistemas,
+                                    como de aplicações comerciais e até científicas, pode ser chamado de desenvolvedor
+                                    back-end.
+                                    E geralmente, nessas aplicações, este desenvolvedor trabalha um pouco com a parte
+                                    visual. Por isso, para este artigo, o desenvolvedor back-end levado em conta, é o
+                                    desenvolvedor de aplicações web
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</main>
+
+
+<footer style="background-color: rgba(9,31,40,0.84)">
+    <div class="rodape">
+
+        <div class="footer-item">
+            <div class="img-footer">
+                <img src="{% static 'portfolio/images/logo.jpg' %}" alt="Rodrigo Sousa">
+                <h2>Rodrigo Sousa, a22002264, Universidade de Lisboa de Humanidades e Tecnologias, 2022</h2>
+            </div>
+
+
+        </div>
+
+        <div class="footer-item">
+            <h2>Contactos</h2>
+            <ul>
                 <li>
-                    <a href="#">
-                        <i class="fab fa-github"></i>
+                    <a href="#https://github.com/a22002264">
+                        <i class="fab fa-github-square"></i>
                         <span>Github</span>
                     </a>
-
-                    <a class="github" href="https://github.com/a22002264">Github</a>
                 </li>
                 <li>
-                    <a href="#">
-                        <i class="fab fa-instagram"></i>
-                        <span>Instagram</span>
+                    <a href="#https://github.com/a22002264">
+                        <i class="fab fa-facebook-square">
+                        </i>
+                        <span>Facebook</span>
                     </a>
-
-                    <a class="github" href="https://github.com/a22002264">Github</a>
                 </li>
                 <li>
-                    <a href="#">
-                        <i class="fab fa-linkedin"></i>
-                        <span>Linkedin</span>
+                    <a href="#https://github.com/a22002264">
+                        <i class="fab fa-github-square"></i>
+
+                        <span>Github</span>
                     </a>
-
-                    <a class="github" href="https://www.linkedin.com/in/rodrigo-sousa-31a6aa1a3/">Github</a>
                 </li>
+                <li>
+                    <a href="#https://github.com/a22002264">
+                        <i class="fab fa-twitter"></i>
 
+                        <span>Twitter</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#https://github.com/a22002264">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>whatsapp</span>
+                    </a>
+                </li>
             </ul>
         </div>
-        <div>
 
-        </div>
+
     </div>
+
+
 </footer>
+
+<script src="{% static 'portfolio/js/main.js' %}">
+
+
+</script>
+
 </body>

@@ -3,10 +3,13 @@ from django.shortcuts import render
 # Create your views here.
 from django.shortcuts import render
 
+
 def home_page_view(request):
-	return render(request, 'portfolio/home.html')
+    return render(request, 'portfolio/home.html')
+
 
 import datetime
+
 
 # Create your views here.
 def index_view(request):
@@ -25,3 +28,7 @@ def index_view(request):
 
 def about_view(request):
     return render(request, 'portfolio/home.html')
+
+
+def quizzview(request):
+    return render(request, 'portfolio/quizz.html')

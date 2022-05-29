@@ -1,0 +1,276 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="layout.css">
+    <meta charset="UTF-8">
+    <title>Quizz</title>
+    <link rel="shortcut icon" type="image/x-icon" href="image/Green-Leaf.ico"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+
+    <style>
+
+
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        #estilo_titulo1 {
+            font-size: 40px;
+        }
+
+
+        .estilo_titulo2 {
+
+            font-size: 35px;
+            color: rgba(0, 0, 0, 0.84);
+        }
+
+
+        .estilo_textop1 {
+            font-size: 20px;
+            color: rgba(33, 28, 35, 0.84);
+        }
+
+        .estilo_textop2 {
+            font-size: 25px;
+
+        }
+
+        .estilo_textop3 {
+            font-size: 20px;
+
+        }
+
+        .question {
+            font-weight: 600;
+        }
+
+        .answers {
+            margin-bottom: 20px;
+        }
+
+        #submit {
+            font-family: sans-serif;
+            font-size: 20px;
+            background-color: #297;
+            color: #fff;
+            border: 0px;
+            border-radius: 3px;
+            padding: 20px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        #submit:hover {
+            background-color: #3a8;
+        }
+
+        #quizz {
+
+            background-size: cover;
+
+        }
+
+    </style>
+</head>
+
+
+<body style="background-color:powderblue;">
+<header>
+    <h3 id="estilo_titulo1">Quizz</h3>
+
+</header>
+<main>
+    <section id="quizz">
+        <br>
+        <section>
+            <h5 class="estilo_textop1">
+                <br>
+                <p>Nesta página irá ser apresentado um quizz para testar o seu conhecimento acerca de Programação Web.No
+                    final irá ser apresentado a sua pontuação.</p>
+                </br>
+            </h5>
+        </section>
+        </br>
+        <form method="POST" action="mailto: a22002264@alunos.ulht.pt" enctype="multipart/form-data">
+
+
+            <fieldset>
+
+                <legend class="estilo_textop3">Info</legend>
+                <br>
+                <p>Nome: <input type="text" name="nome"></p>
+                <p>Apelido: <input type="text" name="apelido"></p>
+                <p>Email: <input type="email" name="email"></p>
+                </br>
+            </fieldset>
+
+            <fieldset>
+                <legend class="estilo_textop2">Perguntas:</legend>
+                <br>
+                <div id="quiz"></div>
+                <button id="submit">Get Results</button>
+                <h2>Pontuação:</h2>
+                <div id="results"></div>
+                </br>
+            </fieldset>
+            </fieldset>
+            <fieldset>
+                <legend class="estilo_textop2">Opinião</legend>
+                <br>
+                <label for="Lisboa">Observações sobre Lisboa:</label>
+                <textarea id="Lisboa" name="w3review" rows="4" cols="50">
+
+  </textarea>
+                </br>
+                <br><br>
+                <input type="submit" value="Submit"></fieldset>
+
+
+        </form>
+
+    </section>
+</main>
+
+<footer>
+    <br>
+    <p>Rodrigo Sousa, a22002264, Universidade de Lisboa de Humanidades e Tecnologias, 2022</p>
+    </br>
+</footer>
+
+<script>
+    var myQuestions = [
+        {
+            question: "Assinale a alternativa correta:",
+            answers: {
+                a: 'HTML é um programa que favorece o desenvolvimento de arquivos CSS.',
+                b: 'HTML e CSS são as tecnologias utilizadas na construção de páginas da Web: HTML (html e xhtml) para a estrutura, CSS para o estilo e layout, incluindo WebFonts.',
+                c: 'Ambos são os conceitos fundamentais aplicados em dados abertos conectados.'
+            },
+            correctAnswer: 'c'
+        },
+        {
+            question: "Analise as recomendações abaixo, identificando se são corretas ou incorretas do ponto de vista construção de um site com acessibilidade e de acordo com o eMAG." +
+                "I. É recomendável disponibilizar o bloco do conteúdo principal da página antes do bloco de menu." + "II. A validação de códigos HTML e das folhas de estilo é sugerida como passos de avaliação de acessibilidade." + "III. Assegure-se que cores como vermelho e verde sejam usadas para destacar elementos na página.",
+            answers: {
+                a: ' Apenas I.',
+                b: 'Apenas II.',
+                c: 'Apenas III.',
+                d: 'Apenas I e II.',
+                e: 'I, II e III.'
+            },
+            correctAnswer: 'c'
+        },
+        {
+            question: "HTML é uma linguagem de marcação que descreve a estrutura de um documento. Essa linguagem é utilizada para desenvolver páginas Web. Sobre o HTML seguem-se três afirmações:" + "I - Páginas criadas em HTML sempre são visualizadas da mesma forma em navegadores diferentes, mesmo quando executados em plataformas de hardware diferentes."
+                + "II - As páginas escritas em HTML são arquivos de texto no formato ASCII." + "III - O HTML possui um conjunto previamente definido de tags, no entanto o usuário pode criar as suas próprias tags.",
+
+
+            answers: {
+                a: 'I.',
+                b: 'II.',
+                c: 'III.',
+                d: 'I e II.',
+                e: 'II e III.'
+            },
+            correctAnswer: 'a'
+        }
+    ];
+
+    var quizContainer = document.getElementById('quiz');
+    var resultsContainer = document.getElementById('results');
+    var submitButton = document.getElementById('submit');
+
+    generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+
+    function generateQuiz(questions, quizContainer, resultsContainer, submitButton) {
+
+        function showQuestions(questions, quizContainer) {
+            // precisaremos de um lugar para armazenar a saída e as opções de resposta
+            var output = [];
+            var answers;
+
+            // para cada questão
+            for (var i = 0; i < questions.length; i++) {
+
+                // mas, primeiro resetamos a lista de questões
+                answers = [];
+
+                // e aqui faremos para cada resposta na questão.
+                for (letter in questions[i].answers) {
+
+                    // Aqui será escrito para html para usar o Radio.
+                    answers.push(
+                        '<label>'
+                        + '<input type="radio" name="question' + i + '" value="' + letter + '">'
+                        //	+ letter + ') ' vou deixar a letra comentada, porque achei melhor assim
+                        + questions[i].answers[letter]
+                        + '</label>'
+                    );
+                }
+
+                // add this question and its answers to the output
+                output.push(
+                    '<div class="question">' + questions[i].question + '</div>'
+                    + '<div class="answers">' + answers.join('') + '</div>'
+                );
+            }
+
+            // finally combine our output list into one string of html and put it on the page
+            quizContainer.innerHTML = output.join('');
+        }
+
+
+        function showResults(questions, quizContainer, resultsContainer) {
+
+
+            var answerContainers = quizContainer.querySelectorAll('.answers');
+
+
+            var userAnswer = '';
+            var numCorrect = 0;
+
+
+            for (var i = 0; i < questions.length; i++) {
+
+                // agora ele vai virar a letra que esta marcada.
+                userAnswer = (answerContainers[i].querySelector('input[name=question' + i + ']:checked') || {}).value;
+
+
+                if (userAnswer === questions[i].correctAnswer) {
+
+                    numCorrect++;
+
+
+                    answerContainers[i].style.color = 'lightgreen';
+                } else {
+
+                    answerContainers[i].style.color = 'red';
+                }
+            }
+
+
+            resultsContainer.innerHTML = numCorrect + ' de ' + questions.length;
+        }
+
+        // show questions right away
+        showQuestions(questions, quizContainer);
+
+        // on submit, show results
+        submitButton.onclick = function () {
+            showResults(questions, quizContainer, resultsContainer);
+        }
+    }
+
+
+</script>
+</body>
+
+
+</html>

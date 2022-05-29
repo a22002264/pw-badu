@@ -10,5 +10,5 @@ app_name = "portfolio"
 urlpatterns = [
     path('', views.home_page_view),
     path('home', views.home_page_view, name='home'),
-
+    path('quizz', views.quizzview, name='quizz'),
 ]
