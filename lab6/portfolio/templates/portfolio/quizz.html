@@ -170,23 +170,24 @@
     <img src="/logo.png" alt="">
     <h2 id="score-title">Your Score</h2>
     <h2 id="score"></h2>
-    <button type="button" id="score-btn" onclick="backToQuiz()">Back to Quiz</button>
-    <button type="button" id="check-answer" onclick="checkAnswer()">Check Answers</button>
+    <button type="button" id="score-btn" onclick="backToQuiz()">Voltar para o Quizz</button>
+    <button type="button" id="check-answer" onclick="checkAnswer()">Soluções</button>
 </div>
 
-<!-- answers section -->
+
 <div id="answerBank">
-    <h2>Answers :</h2>
+    <h2>Soluções :</h2>
     <ol type="1" id="answers">
 
     </ol>
-    <button type="button" id="score-btn" onclick="backToQuiz()">Back to Quiz</button>
+    <button type="button" id="score-btn" onclick="backToQuiz()">Voltar para o Quizz</button>
 </div>
 
-<!-- javascript file source -->
-<script src="/quiz.js"></script>
+
+
 </body>
-<script>var questionBank = [
+<script>
+    var questionBank = [
 
     {
         question:  'Assinale a alternativa correta:',
@@ -222,7 +223,7 @@ var span = document.querySelectorAll('span');
 var i = 0;
 var score = 0;
 
-//function to display questions
+
 function displayQuestion() {
     for (var a = 0; a < span.length; a++) {
         span[a].style.background = 'none';
@@ -235,7 +236,7 @@ function displayQuestion() {
     stat.innerHTML = "Question" + ' ' + (i + 1) + ' ' + 'of' + ' ' + questionBank.length;
 }
 
-//function to calculate scores
+
 function calcScore(e) {
     if (e.innerHTML === questionBank[i].answer && score < questionBank.length) {
         score = score + 1;
@@ -246,7 +247,7 @@ function calcScore(e) {
     setTimeout(nextQuestion, 300);
 }
 
-//function to display next question
+
 function nextQuestion() {
     if (i < questionBank.length - 1) {
         i = i + 1;
@@ -258,15 +259,15 @@ function nextQuestion() {
     }
 }
 
-//click events to next button
+
 next.addEventListener('click', nextQuestion);
 
-//Back to Quiz button event
+
 function backToQuiz() {
     location.reload();
 }
 
-//function to check Answers
+
 function checkAnswer() {
     var answerBank = document.getElementById('answerBank');
     var answers = document.getElementById('answers');
