@@ -23,12 +23,12 @@
 
             </a>
             <ul>
-                <li><a href=#topo">Início</a></li>
+                <li><a onclick=scrollToView("sobreMim")>Início</a></li>
                 <li><a onclick=scrollToView("sobreMim")>Sobre mim</a></li>
-                <li><a onclick=scrollToView("CartaRecomendacao")>Carta de Recomendação</a></li>
+                <li><a onclick=scrollToView("curriculo")>Curriculo</a></li>
                 <li><a onclick=scrollToView("ProgressoAcademico")>Progresso Académico</a></li>
-                <li><a href="{% url 'portfolio:projetos' %}" class="estilo_textop2">Projetos</a></li>
                 <li><a onclick=scrollToView("ProgramacaoWeb")>Programação Web</a></li>
+                  <li><a href="{% url 'portfolio:projetos' %}" class="estilo_textop2">Projetos</a></li>
                 <li><a href="{% url 'portfolio:quizz' %}" class="estilo_textop2">Quizz</a></li>
                 <li><a onclick=scrollToView("rodape")>Contato</a></li>
             </ul>
@@ -146,7 +146,7 @@
             <h2 class="estilo_titulo2"> Progresso Académico</h2>
 
             <div class="section-container">
-                <h2 class="estilo_ProgressoAcademico"> Educação</h2>
+                <h2 class="estilo_ProgressoAcademico" style="color: #FFFFFF "> Educação</h2>
                 <div class="section-container">
 
 
@@ -157,7 +157,7 @@
                             Faria.Arruda dos Vinhos – Setembro de 2016 a Julho de 2019. Média final: 13 valores.</p>
                     </div>
                 </div>
-                <h2 class="estilo_ProgressoAcademico">Licenciatura</h2>
+                <h2 class="estilo_ProgressoAcademico" style="color: #FFFFFF ">Licenciatura</h2>
                 <div class="section-container">
 
 
@@ -179,13 +179,13 @@
                             conhecimento, assim como à compreensão e resolução dos problemas associados.</p>
                     </div>
                 </div>
-                <h2 class="estilo_ProgressoAcademico"> Cadeiras</h2>
+                <h2 class="estilo_ProgressoAcademico" style="color: #FFFFFF "> Cadeiras</h2>
                 <div class="section-container">
                     <div class="section-cadeiras">
 
                         <div class="cadeiras">
                             <div class="educacaoTopicos" style="background-color:rgb(61,64,94)">
-                                <h2 class="estilo_textop4"> 1º Ano</h2>
+                                <h2 class="estilo_titulo2"> 1º Ano</h2>
                                 <ul>
                                     <li>Fundamentos de Física</li>
                                     <li>Fundamentos de Programação</li>
@@ -238,7 +238,47 @@
         </div>
     </section>
 
+  <section id="curriculo">
 
+        <div class="section-container">
+            <h2 class="estilo_titulo2"> Curriculo</h2>
+            <div class="section-container">
+
+
+                <div class="section-licenciatura">
+                    <p>Em baixo, encontra-se informação adicional que permite ter mais conhecimento acerca da minha vida
+                        pessoal e professional. Neste CV contém tópicos informativos como, Workshops participados,
+                        capacidades Linguisticas, assim como outras competências adquiridas ao longo dos anos. Também se
+                        encontra a disposição os contatos assim como as minhas experiências passadas.</p>
+
+                </div>
+            </div>
+
+
+        </div>
+        <div class="section-container">
+
+
+            <div class="section-licenciatura">
+
+                <div class="portfolioRodrigo">
+                    <div class="img-container">
+                        <img src="{% static 'portfolio/images/curriculo1.png' %}" alt="Rodrigo Sousa">
+
+                    </div>
+
+                    <div class="img-container">
+
+                        <img src="{% static 'portfolio/images/curriculo2.png' %}" alt="Rodrigo Sousa">
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </section>
     <section id="ProgramacaoWeb">
         <div class="section-container">
             <h2 class="estilo_titulo2"> Curiosidades sobre Programação Web</h2>
@@ -291,7 +331,7 @@
 
                 </div>
 
-<div class="educacaoTopicos" style="background-color:rgb(61,64,94)">
+                <div class="educacaoTopicos" style="background-color:rgb(61,64,94)">
                     <img src="{% static 'portfolio/images/entidadeRelacao.png' %}">
 
                 </div>

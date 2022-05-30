@@ -190,11 +190,16 @@ nav:after {
 }
 
 #ProgressoAcademico {
-    background-image: url("../images/escola.png");
+     background-image: url("../images/final.png");
     background-size: cover;
 
 }
 
+#curriculo{
+
+        background-image: url("../images/imgemFundo.jpg");
+    background-size: cover;
+}
 #Informatica{
 background-image: url("../images/imgemFundo.jpg");
     background-size: cover;
