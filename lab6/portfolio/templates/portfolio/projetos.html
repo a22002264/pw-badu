@@ -4,7 +4,7 @@
 <head>
     <link rel="stylesheet" href="layout.css">
     <meta charset="UTF-8">
-    <title>Projetos</title>
+    <title>Quizz</title>
     <link rel="shortcut icon" type="image/x-icon" href="image/Green-Leaf.ico"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,645 +13,266 @@
 
     <style>
 
-* {
-    font-family: 'Lato', sans-serif;
-}
 
-.material-icons.md-24 {
-    font-size: 24px;
-}
+        * {
+            margin: 0;
+            padding: 0;
 
+        }
 
-* {
-    box-sizing: border-box;
-}
+        #estilo_titulo1 {
+            font-size: 40px;
+        }
 
-* {
-    margin: 0;
-    padding: 0;
 
-}
+        .estilo_titulo2 {
 
-#estilo_titulo1 {
-    font-size: 40px;
-}
+            font-size: 35px;
+            color: rgba(0, 0, 0, 0.84);
+        }
 
 
-.estilo_titulo2 {
+        .estilo_textop1 {
+            font-size: 20px;
+            color: rgba(33, 28, 35, 0.84);
+        }
 
-    font-size: 35px;
-    color: rgba(0, 0, 0, 0.84);
-}
+        .estilo_textop2 {
+            font-size: 25px;
 
-.estilo_titulo3 {
+        }
 
-    font-size: 25px;
-    color: rgba(0, 0, 0, 0.84);
-}
+        .estilo_textop3 {
+            font-size: 20px;
 
-.estilo_textop1 {
-    font-size: 20px;
-    color: rgba(33, 28, 35, 0.84);
-}
+        }
 
-.estilo_textop3 {
-    font-size: 30px;
-    color: rgb(255, 255, 255);
+        .question {
+            font-weight: 600;
+        }
 
+        .answers {
+            margin-bottom: 20px;
+        }
 
-}
+        #submit {
+            font-family: sans-serif;
+            font-size: 20px;
+            background-color: #297;
+            color: #fff;
+            border: 0px;
+            border-radius: 3px;
+            padding: 20px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
 
-.estilo_textop5 {
-    font-size: 30px;
-    color: rgb(255, 255, 255);
-    padding: 25px;
-
-}
-
-.estilo_textop4 {
+        #submit:hover {
+            background-color: #3a8;
+        }
 
-    font-size: 17px;
-    color: rgb(255, 255, 255);
+        #quizz {
 
+            background-size: cover;
 
-}
-
-.flex-container {
-    display: flex;
-    background-color: rgba(185, 233, 255, 0.84);
-}
-
-.flex-container > div {
-    background-color: #f1f1f1;
-    margin: 10px;
-    padding: 20px;
-    font-size: 30px;
-    justify-content: space-around; /* espaça os items de forma igual */
-    border-radius: 20px;
-    /* arredonda os cantos */
-    box-shadow: 5px 5px 15px #888888; /* cria sombra */
-
-}
-
-
-* {
-    box-sizing: border-box;
-}
-
-
-nav a {
-    padding: 20px;
-    background-color: rgba(28, 61, 94, 0.84);
-    margin: 2px;
-    text-decoration: none;
-    color: #ffffff;
-    box-shadow: 2px 3px 3px lightgrey;
-    border-radius: 5px;
-}
-
-nav a:hover {
-    background-color: rgba(98, 92, 92, 0.84);
-    font-weight: bold
-}
-
-nav {
-    display: flex;
-}
-
-nav a:last-child {
-    margin-left: auto;
-    background-color: dodgerblue;
-    color: white;
-    border-radius: 10px;
-}
-
-
-.capitais {
-    display: flex;
-    flex-flow: row wrap;
-    /* caixas dispostas em linha e fazendo quebra de linha se necessário */
-    justify-content: space-around;
-    /* espaça horizontalmente os items entre si de forma igual */
-    align-content: space-around;
-    /* espaça vericalmente os items entre si de forma igual */
-    background-color: rgba(185, 233, 255, 0.84);
-    padding: 50px;
-
-}
-
-.capitais > div {
-    /* este selector identifica todos os elementos div "filhos" do elemento com classe capitais */
-    display: flex;
-    justify-content: space-around; /* espaça os items de forma igual */
-    border-radius: 20px;
-    /* arredonda os cantos */
-    box-shadow: 5px 5px 15px #888888; /* cria sombra */
-    margin: 10px;
-    /* garante um espaçamento mínimo entre elementos */
-}
-
-.capitais img {
-    /* este selector identifica todas as imagens dentro do elemento com classe capitais: (elementos imagem dentro de elemento com classe capitais) */
-    border-radius: 20px 0 0 20px; /* arredonda 1º canto (superior à esq.) e 4º canto */
-    height: 100%;
-}
-
-.capitais div div:last-child {
-    /* este selector identifica os divs com o parágrafo com nome da capital (ultimo div filho de cada div dentro do elemento com classe capitais) */
-    width: 150px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 0 20px 20px 0; /* arredonda 29 e 3º canto */
-    /* para centrar nome da capital na caixa (horizontal e vertical) */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-@media (min-width: 901px) {
-
-    img {
-        width: 100%;
-        height: 100%;
-    }
-
-
-
-    .destinos {
-
-
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-gap: 10px;
-        background-color: rgba(185, 233, 255, 0.84);
-        padding: 10px;
-        grid-auto-rows: 200px;
-        grid-template-areas:
-    'evora torresVedras braga budget budget'
-    'faro faro vianaCastelo budget budget';
-    }
-
-
-}
-
-
-.destinos {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 10px;
-    background-color: rgba(185, 233, 255, 0.84);
-    padding: 10px;
-    grid-auto-rows: 200px;
-    grid-template-areas:
-    'evora torresVedras braga budget budget'
-    'faro faro vianaCastelo budget budget';
-}
-
-
-.posicaoTexto {
-    position: relative;
-    bottom: -21%;
-    padding: 150px;
-    /* top: 100%; */
-
-}
-
-
-.evora {
-    grid-area: evora;
-    background-image: url("../lab4/fotografias/evora.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.torresVedras {
-    grid-area: torresVedras;
-    background-image: url("../lab4/fotografias/torresVedras.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.braga {
-    grid-area: braga;
-    background-image: url("../lab4/fotografias/braga.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.faro {
-    grid-area: faro;
-    background-image: url("../lab4/fotografias/faro.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.vianaCastelo {
-
-    grid-area: vianaCastelo;
-    background-image: url("../lab4/fotografias/vianaCastelo.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.budget {
-    grid-area: budget;
-
-
-}
-
-
-
-
-.imageBudget {
-    grid-area: budgetGrid;
-    background-image: url("../lab4/fotografias/budget.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
-.limitBudget {
-    grid-area: budgetGrid;
-}
-
-.bottomBudget {
-    grid-area: bottomBudget;
-}
-
-.posicaoBudget {
-    position: relative;
-    bottom: -21%;
-    padding: 150px;
-}
-
-
-@media (max-width: 900px) {
-
-    img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .destinos {
-
-
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-gap: 10px;
-        background-color: rgba(185, 233, 255, 0.84);
-        padding: 10px;
-        grid-auto-rows: 200px;
-        grid-template-areas:
-                    'evora torresVedras'
-                    'braga vianaCastelo'
-                    'budget budget'
-                    'faro faro';
-    }
-
-
-}
-
+        }
 
     </style>
 </head>
 
 
-<body style="background-color:rgba(99,161,125,0.84)">
+<body style="background-color:powderblue;">
+<header>
+    <h3 id="estilo_titulo1">Quizz</h3>
 
-<br>
-<h1 id="estilo_titulo1">Capitais Europeias </h1>
-</br>
-<br>
-<nav>
-    <a href="">Cidades europeias</a>
-    <a href="">Dicas para viajar</a>
-    <a href="">Destinos de sonho</a>
-    <a href=" ../index.html ">Sign-in</a>
-</nav>
 
-</br>
-
-<br>
-
-<h2 class="estilo_titulo2"> Cidades Europeias</h2>
-
-</br>
-
-<div class="capitais">
-    <div>
-        <div><img src="fotografias\bruxelas.avif" alt=""></div>
-        <div>
-            <h1 class="estilo_titulo3">Bruxelas</h1>
-        </div>
-    </div>
-    <div>
-        <div><img src="fotografias\lisboa.avif" alt=""></div>
-        <div>
-            <h1 class="estilo_titulo3">Lisboa</h1>
-        </div>
-    </div>
-    <div>
-        <div><img src="fotografias\budapeste.avif" alt=""></div>
-        <div>
-            <h1 class="estilo_titulo3">Budapeste</h1>
-        </div>
-    </div>
-    <div>
-        <div><img src="fotografias\londres.avif" alt=""></div>
-        <div>
-            <h1 class="estilo_titulo3">Londres</h1>
-        </div>
-    </div>
-    <div>
-        <div><img src="fotografias\milao.avif" alt=""></div>
-        <div>
-            <h1 class="estilo_titulo3">Milão</h1>
-        </div>
-    </div>
-    <div>
-        <div><img src="fotografias\paris.avif" alt=""></div>
-        <div>
-            <h1 class="estilo_titulo3">Paris</h1>
-        </div>
-    </div>
-    <div>
-        <div><img src="fotografias\praga.avif" alt=""></div>
-        <div>
-            <h1 class="estilo_titulo3">Praga</h1>
-        </div>
-    </div>
-    <div>
-        <div><img src="fotografias\reykiavik.avif" alt=""></div>
-        <div>
-            <h1 class="estilo_titulo3">Reykiavik</h1>
-        </div>
-    </div>
-    <div>
-        <div><img src="fotografias\roma.avif" alt=""></div>
-        <div>
-            <h1 class="estilo_titulo3">Roma</h1>
-        </div>
-    </div>
-    <div>
-        <div><img src="fotografias\varsovia.avif" alt=""></div>
-        <div>
-            <h1 class="estilo_titulo3">Varsóvia</h1>
-        </div>
-    </div>
-    <div>
-        <div><img src="fotografias\viena.avif" alt=""></div>
-        <div>
-            <h1 class="estilo_titulo3">Viena</h1>
-        </div>
-    </div>
-</div>
-<br>
-
-<h2 class="estilo_titulo2"> Dicas para viajantes</h2>
-
-</br>
-
-<div class="flex-container">
-    <div>
+</header>
+<main>
+    <section id="quizz">
         <br>
-        <div class="estilo_titulo3"><i class="material-icons md-24">cloud</i> Viaje Devagar</div>
+        <section>
+            <h5 class="estilo_textop1">
+                <br>
+                <p>Nesta página irá ser apresentado um quizz para testar o seu conhecimento acerca de Programação Web.No
+                    final irá ser apresentado a sua pontuação.</p>
+                </br>
+            </h5>
+        </section>
         </br>
-        <div class="estilo_textop1"><p>
-            Eu sempre fui fast traveller e levei mais de 1 ano e meio durante a minha viagem
-            para entender os benefícios de viajar devagar. Viajar não é uma competição! Não é o número de países e
-            cidades que você visita que vai fazer a diferença, mas sim como você vive cada dia da sua
-            experiência.</p></div>
-    </div>
-    <div>
+        <form method="POST" action="mailto: a22002264@alunos.ulht.pt" enctype="multipart/form-data">
 
 
-        <br>
-        <div class="estilo_titulo3"><i class="material-icons md-24">cloud</i> Planeje, e não fique Paranôico!</div>
+            <fieldset>
 
-        </br>
-        <div class="estilo_textop1"><p>
-            Um certo planejamento faz bem, pra você não pegar -30 na Europa ou uma chuva
-            torrencial por semanas no Sudeste asiático por exemplo, mas não fique paranóico tentando fazer o plano
-            perfeito. Isso não existe. Existem muitas variáveis fora do seu controle e mesmo planejando você vai ter
-            surpresas.</p></div>
-    </div>
-    <div>
-        <br>
-        <div class="estilo_titulo3"><i class="material-icons md-24">cloud</i> Siga o seu coração</div>
-        </br>
-        <div class="estilo_textop1"><p>
-            Pela primeira vez na sua vida você vai ser totalmente livre. Não deixe o seu
-            planejamento te prender. Planos servem apenas como um norte e não como regras. Mude de idéia quantas
-            vezes for preciso pra viver as experiências que você deseja de verdade. </p></div>
-    </div>
-    <div>
-        <br>
-        <div class="estilo_titulo3"><i class="material-icons md-24">cloud</i> Relaxa e seja paciente</div>
-        </br>
-        <div class="estilo_textop1"><p>
-            Não adianta ficar se estressando com tudo que parece errado pra você. Você vai
-            passar por culturas completamente diferentes da sua e eles fazem as coisas bem diferentes de você. Fato.
-            Se você quiser que tudo seja do seu jeito, então fique em casa ao invés de explorar o mundo. </p>
-        </div>
-    </div>
-    <div>
-        <br>
-        <div class="estilo_titulo3"><i class="material-icons md-24">cloud</i>Interaja com os locais</div>
-        </br>
-        <div class="estilo_textop1">
-            <p>Essa é a melhor forma de conhecer uma cultura e também a mais interessante.
-                Interagir com os locais vai te trazer descobertas incríveis e momentos memoráveis para a sua viagem. É o
-                contato humano que faz a diferença, e dedicar tempo para interagir com as pessoas muitas vezes pode ser
-                bem mais interessante do que visitar um ponto turístico. </p></div>
-    </div>
-    <div>
-        <br>
-        <div class="estilo_titulo3"><i class="material-icons md-24">cloud</i>Experimente</div>
-        </br>
-        <div class="estilo_textop1"><p>
-            Experimente de tudo que passa pelo seu caminho,
-            mesmo aquelas coisas que te tiram da sua zona de conforto.
-            Quanto mais você experimentar maior será seu aprendizado,
-            você vai eliminar muitos preconceitos e mais descobertas vai fazer pra sua vida.</p></div>
-    </div>
-    <div>
-        <br>
-        <div class="estilo_titulo3"><i class="material-icons md-24">cloud</i>Viaje Barato</div>
-        </br>
-        <div class="estilo_textop1"><p>
-            Eu sempre digo que viajar barato não deve ser uma necessidade,
-            mas sim um interesse. Eu nunca tinha viajado tão barato antes da minha viagem de 2 anos pelo
-            mundo, mas após ter vivido essa experiência comecei a
-            perceber os benefícios que ela oferece.</p></div>
-    </div>
-    <div>
-        <br>
-        <div class="estilo_titulo3"><i class="material-icons md-24">cloud</i> Não leve muita coisa</div>
-        </br>
-        <div class="estilo_textop1"><p>
-            Eu sei que a maioria das pessoas não acredita, mas você não precisa de tanta
-            coisa assim para viajar um ano ou mais. Esqueça o conceito de férias onde você leva roupa pra passear.
-            Tudo o que você levar vai ter que carregar nas suas costas.</p></div>
-    </div>
+                <legend class="estilo_textop3">Info</legend>
+                <br>
+                <p>Nome: <input type="text" name="nome"></p>
+                <p>Apelido: <input type="text" name="apelido"></p>
+                <p>Email: <input type="email" name="email"></p>
+                </br>
+            </fieldset>
+
+            <fieldset>
+                <legend class="estilo_textop2">Perguntas:</legend>
+                <br>
+                <div id="quiz"></div>
+                <button id="submit">Get Results</button>
+                <h2>Pontuação:</h2>
+                <div id="results"></div>
+                </br>
+            </fieldset>
+            </fieldset>
+            <fieldset>
+                <legend class="estilo_textop2">Opinião</legend>
+                <br>
+                <label for="Lisboa">Observações:</label>
+                <textarea id="Lisboa" name="w3review" rows="4" cols="50">
+
+  </textarea>
+                </br>
+                <br><br>
+                <input type="submit" value="Enviar"></fieldset>
 
 
-</div>
+        </form>
 
-<br>
-
-<h3 class="estilo_titulo2">Destinos de sonho</h3>
-</br>
-
-<div class="destinos">
-    <div class="evora">
-        <div>
-            <p class="estilo_textop5">
-                 Atividades
-            </p>
-        </div>
-        <div class="posicaoTexto">
-            <br>
-
-            <p class="estilo_textop3">
-                Évora
-            </p>
-            </br>
-            <h4 class="estilo_textop3">
-               Preço: 200$
-            </h4>
-        </div>
-
-
-    </div>
-
-
-    <div class="torresVedras">
-         <div>
-            <p class="estilo_textop5">
-                    Economia
-            </p>
-        </div>
-        <div class="posicaoTexto">
-            <br>
-            <p class="estilo_textop3">
-              Torres Vedras
-            </p>
-            </br>
-            <h4 class="estilo_textop3">
-                      Preço: 250$
-            </h4>
-
-        </div>
-
-
-    </div>
-
-
-    <div class="braga">
-        <div>
-            <p class="estilo_textop5">
-                    Passeios
-            </p>
-        </div>
-        <div class="posicaoTexto">
-            <br>
-            <p class="estilo_textop3">
-                Braga
-            </p>
-            </br>
-            <h4 class="estilo_textop3">
-                 Preço: 300$
-            </h4>
-
-        </div>
-
-
-    </div>
-
-
-    <div class="faro">
-           <div>
-            <p class="estilo_textop5">
-                      Praias e Lazer
-            </p>
-        </div>
-        <div class="posicaoTexto">
-
-            <br>
-            <p class="estilo_textop3">
-               Faro
-            </p>
-            </br>
-            <h4 class="estilo_textop3">
-               Preço: 300$
-            </h4>
-
-        </div>
-
-
-    </div>
-
-
-    <div class="vianaCastelo">
-          <div>
-            <p class="estilo_textop5">
-                      História
-            </p>
-                  </div>
-
-        <div class="posicaoTexto">
-
-            <p class="estilo_textop3">
-                Viana do Castelo
-            </p>
-
-            <h4 class="estilo_textop3">
-                 Preço: 400$
-            </h4>
-
-        </div>
-
- </div>
-
-
-
-    <div class="budget">
-<div class="imageBudget">
-<img src="fotografias\budget.jpeg" >
-
-</div>
-        <div class="limitBudget">
-            <br>
-            <p class="estilo_textop5">
-                      Limited Budget:
- </p>
-            </br>
-             <br>
-             <p class="estilo_textop3">
-                Viajar é fatal para o preconceito, a intolerância e as ideias limitadas. Não se pode ter uma visão ampla,
-                abrangente e generosa dos homens vegetando num cantinho do mundo a vida inteira.
-            </p>
-            </br>
-        </div>
-
-
-
-        <div class="bottomBudget">
-<input type='button' value='Explore Detalhes' style="width: 100px; height: 75px">
-
-        </div>
-    </div>
-
-</div>
+    </section>
+</main>
 
 <footer>
     <br>
     <p>Rodrigo Sousa, a22002264, Universidade de Lisboa de Humanidades e Tecnologias, 2022</p>
     </br>
 </footer>
+
+<script>
+    var myQuestions = [
+        {
+            question: "Assinale a alternativa correta:",
+            answers: {
+                a: 'HTML é um programa que favorece o desenvolvimento de arquivos CSS.',
+                b: 'HTML e CSS são as tecnologias utilizadas na construção de páginas da Web: HTML (html e xhtml) para a estrutura, CSS para o estilo e layout, incluindo WebFonts.',
+                c: 'Ambos são os conceitos fundamentais aplicados em dados abertos conectados.'
+            },
+            correctAnswer: 'c'
+        },
+        {
+            question: "Analise as recomendações abaixo, identificando se são corretas ou incorretas do ponto de vista construção de um site com acessibilidade e de acordo com o eMAG." +
+                "I. É recomendável disponibilizar o bloco do conteúdo principal da página antes do bloco de menu." + "II. A validação de códigos HTML e das folhas de estilo é sugerida como passos de avaliação de acessibilidade." + "III. Assegure-se que cores como vermelho e verde sejam usadas para destacar elementos na página.",
+
+            answers: {
+                a: ' Apenas I.',
+                b: 'Apenas II.',
+                c: 'Apenas III.',
+                d: 'Apenas I e II.',
+                e: 'I, II e III.'
+            },
+            correctAnswer: 'c'
+        },
+        {
+            question: "HTML é uma linguagem de marcação que descreve a estrutura de um documento. Essa linguagem é utilizada para desenvolver páginas Web. Sobre o HTML seguem-se três afirmações:" + "I - Páginas criadas em HTML sempre são visualizadas da mesma forma em navegadores diferentes, mesmo quando executados em plataformas de hardware diferentes."
+                + "II - As páginas escritas em HTML são arquivos de texto no formato ASCII." + "III - O HTML possui um conjunto previamente definido de tags, no entanto o usuário pode criar as suas próprias tags.",
+
+
+            answers: {
+                a: 'I.',
+                b: 'II.',
+                c: 'III.',
+                d: 'I e II.',
+                e: 'II e III.'
+            },
+            correctAnswer: 'a'
+        }
+    ];
+
+    var quizContainer = document.getElementById('quiz');
+    var resultsContainer = document.getElementById('results');
+    var submitButton = document.getElementById('submit');
+
+    generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+
+    function generateQuiz(questions, quizContainer, resultsContainer, submitButton) {
+
+        function showQuestions(questions, quizContainer) {
+            // precisaremos de um lugar para armazenar a saída e as opções de resposta
+            var output = [];
+            var answers;
+
+            // para cada questão
+            for (var i = 0; i < questions.length; i++) {
+
+                // mas, primeiro resetamos a lista de questões
+                answers = [];
+
+                // e aqui faremos para cada resposta na questão.
+                for (letter in questions[i].answers) {
+
+                    // Aqui será escrito para html para usar o Radio.
+                    answers.push(
+                        '<label>'
+                        + '<input type="radio" name="question' + i + '" value="' + letter + '">'
+                        //	+ letter + ') ' vou deixar a letra comentada, porque achei melhor assim
+                        + questions[i].answers[letter]
+                        + '</label>'
+                    );
+                }
+
+                // add this question and its answers to the output
+                output.push(
+                    '<div class="question">' + questions[i].question + '</div>'
+                    + '<div class="answers">' + answers.join('') + '</div>'
+                );
+            }
+
+            // finally combine our output list into one string of html and put it on the page
+            quizContainer.innerHTML = output.join('');
+        }
+
+
+        function showResults(questions, quizContainer, resultsContainer) {
+
+
+            var answerContainers = quizContainer.querySelectorAll('.answers');
+
+
+            var userAnswer = '';
+            var numCorrect = 0;
+
+
+            for (var i = 0; i < questions.length; i++) {
+
+                // agora ele vai virar a letra que esta marcada.
+                userAnswer = (answerContainers[i].querySelector('input[name=question' + i + ']:checked') || {}).value;
+
+
+                if (userAnswer === questions[i].correctAnswer) {
+
+                    numCorrect++;
+
+
+                    answerContainers[i].style.color = 'lightgreen';
+                } else {
+
+                    answerContainers[i].style.color = 'red';
+                }
+            }
+
+
+            resultsContainer.innerHTML = numCorrect + ' de ' + questions.length;
+        }
+
+        // show questions right away
+        showQuestions(questions, quizContainer);
+
+        // on submit, show results
+        submitButton.onclick = function () {
+            showResults(questions, quizContainer, resultsContainer);
+        }
+    }
+
+
+</script>
 </body>
+
+
 </html>
