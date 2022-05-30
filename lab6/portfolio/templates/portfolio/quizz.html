@@ -36,9 +36,9 @@
             text-align: center;
             padding: 0.8rem 0;
             font-size: 3rem;
-            color: rgb(49, 70, 7);
-            background: rgba(105, 224, 90, 0.55);
-            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: rgba(0, 0, 0, 0.84);
+            background: rgb(255, 255, 255);
+            font-family: 'Open Sans', sans-serif;
         }
 
         .questions {
@@ -98,8 +98,8 @@
             outline: none;
             font-size: 1.5rem;
             border-radius: 1.5rem;
-            color: rgba(93, 53, 156, 0.98);
-            background: rgba(161, 177, 19, 0.82);
+            color: rgb(255, 255, 255);
+            background: rgba(0, 0, 0, 0.84);
         }
 
         button:active {
@@ -144,11 +144,11 @@
 
 <body>
 <img src="/logo.png" alt="img" id="img" class="img">
-<h1 id="title">Today's Quiz</h1>
+<h1 id="title">Quizz de Programação Web</h1>
 
-<!-- quiz-container -->
+
 <div id="quiz-container">
-    <!-- question container -->
+
     <div class="questions">
         <h2 id="question"></h2>
         <ol type="A">
@@ -166,7 +166,6 @@
 
 </div>
 
-<!-- scoreboard section -->
 <div id="scoreboard">
     <img src="/logo.png" alt="">
     <h2 id="score-title">Your Score</h2>
@@ -283,4 +282,5 @@ function checkAnswer() {
 
 displayQuestion();
 </script>
+
 </html>
