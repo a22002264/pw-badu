@@ -32,3 +32,6 @@ def about_view(request):
 
 def quizzview(request):
     return render(request, 'portfolio/quizz.html')
+
+def projetosview(request):
+    return render(request, 'portfolio/projetos.html')

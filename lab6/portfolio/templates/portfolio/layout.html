@@ -27,7 +27,7 @@
                 <li><a onclick=scrollToView("sobreMim")>Sobre mim</a></li>
                 <li><a onclick=scrollToView("CartaRecomendacao")>Carta de Recomendação</a></li>
                 <li><a onclick=scrollToView("ProgressoAcademico")>Progresso Académico</a></li>
-                <li><a onclick=scrollToView("Projetos")>Projetos</a></li>
+                <li><a href="{% url 'portfolio:projetos' %}" class="estilo_textop2">Projetos</a></li>
                 <li><a onclick=scrollToView("ProgramacaoWeb")>Programação Web</a></li>
                 <li><a href="{% url 'portfolio:quizz' %}" class="estilo_textop2">Quizz</a></li>
                 <li><a onclick=scrollToView("rodape")>Contato</a></li>
@@ -73,7 +73,7 @@
         </div>
 
     </section>
- <section id="Informatica">
+    <section id="Informatica">
         <div class="section-container">
             <h2 class="estilo_titulo2"> Aptidões e competências pessoais</h2>
             <div class="section-container">
@@ -239,9 +239,6 @@
     </section>
 
 
-
-
-
     <section id="ProgramacaoWeb">
         <div class="section-container">
             <h2 class="estilo_titulo2"> Curiosidades sobre Programação Web</h2>
@@ -277,6 +274,31 @@
 
                 </div>
             </div>
+            <h2 class="estilo_titulo2"> Diagrama Entidade Relação</h2>
+            <div class="section-container">
+
+
+                <div class="section-licenciatura">
+                    <p>Um diagrama entidade relacionamento (ER) é um tipo de fluxograma que ilustra como “entidades”, p.
+                        ex., pessoas, objetos ou conceitos, se relacionam entre si dentro de um sistema. Diagramas ER
+                        são mais utilizados para projetar ou depurar bancos de dados relacionais nas áreas de engenharia
+                        de software, sistemas de informações empresariais, educação e pesquisa. Também conhecidos como
+                        DERs, ou modelos ER, usam um conjunto definido de símbolos, tais como retângulos, diamantes,
+                        ovais e linhas de conexão para representar a interconectividade de entidades, relacionamentos e
+                        seus atributos. Eles espelham estruturas gramaticais, onde entidades são substantivos e
+                        relacionamentos são verbos.</p>
+
+
+                </div>
+
+<div class="educacaoTopicos" style="background-color:rgb(61,64,94)">
+                    <img src="{% static 'portfolio/images/entidadeRelacao.png' %}">
+
+                </div>
+
+
+            </div>
+
         </div>
     </section>
 
